@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+
+<!-- CSS Styles -->
+
+  
+    <link rel="stylesheet" href="../static/css/w3.css">
+  
+    <link rel="stylesheet" href="../static/css/blog.css">
+  
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-8"> 
+  <!-- Navigation -->
+  <h1>
+    <img src="../static/images/cc_cog_order_to_disorder.svg" alt="csc_cog">
+    <a href="../index.html" class="w3-hover-text-green" style="text-decoration: none">
+      Clayton's Blog
+    </a>
+  </h1>
+</header>
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/clem-onojeghuo--YMhg0KYgVc-unsplash.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@clemono?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clem Onojeghuo</a> on <a href="https://unsplash.com/s/photos/nature-free?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Shared Custom Angular Form Validation Through A Service</u></b></h1>
+    <h5><span class="w3-opacity">November 1, 2022</span></h5>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <p>
+    Recently for work I needed to validate some custom validators within an Angular project.
+    The validators had been written within a service file that could then be shared through
+    out the project. I was not 100% sure how the validators behaved so I decided to write some
+    Jasmine tests to understand how these validators worked and document some cases that passed
+    and failed. I learn a useful way to write a shared service for form model validation and 
+    write tests to validate the validators.
+</p>
+
+<p>
+    This blog post will be giving an overview of how to setup a custom service that can be used
+    through an Angular project to validate form model inputs. Then I will go into how to test
+    those custom validators with Jasmine. 
+</p>
+
+<h2>
+    Creating Our Angular Project
+</h2>
+
+<p>
+    We will be creating a new Angular project to show how to create this shared service. Create
+    you angular project with:
+
+    <div class="w3-code notranslate">
+        ng new shared-form-validation <br>
+        ? Would you like to add Angular routing? No <br>
+        ? Which stylesheet format would you like to use? CSS
+    </div>
+
+    I'm currently use angular this version of angular.
+
+    <div class="w3-code notranslate">
+    C:\>ng version <br>
+    <br>
+    Angular CLI: 13.3.1<br>
+    Node: 14.18.1<br>
+    Package Manager: npm 8.6.0<br>
+    OS: win32 x64
+    </div>
+</p>
+
+<h2>
+    Creating Our Service
+</h2>
+
+<p>
+    I will be creating a custom validator for American Social Security Numbers.
+    A Social Security Number is composed of three numbers, "dash", two numbers,
+    "dash", four numbers. <br>
+    Ex: 111-11-1111 
+</p>
+
+<p>
+    We will create our service through the Angular CLI tool.
+
+    <div class="w3-code notranslate">
+        C:\>ng generate service validation <br>
+        CREATE src/app/validation.service.spec.ts (377 bytes) <br>
+        CREATE src/app/validation.service.ts (139 bytes) 
+    </div>
+
+    This will create the <code class="w3-codespan">validation.service.ts</code> where our
+    validation code will live and the <code class="w3-codespan">validation.service.spec.ts</code>
+    testing file. Lets first write out the validation spec for our social security numbers.
+</p>
+
+<p>
+    A regex expression will be used to validate the text entered in on the form.
+    The regex expression looks like this: <br>
+    <code class="w3-codespan">/^[0-9]{3}\-[0-9]{2}\-[0-9]{4}$/</code>.
+</p>
+
+<p>
+    Our validator will also use the <code class="w3-codespan">'@angular/forms'</code>
+    <code class="w3-codespan">AbstractControl</code>
+    class so that it can be passed in as needed to any angular reactive form class
+    in the angular project.
+</p>
+
+<p>
+    So our angular validation service will look like this:<br>
+
+    <div class="w3-container blog-image ">
+        <img src="../static/images/image0001.png">
+    </div>
+    
+</p>
+
+<h2>
+    Testing Our Validation Service
+</h2>
+
+<p>
+    No we will go about testing out <code class="w3-codespan">ssnValidator</code> within our
+    <code class="w3-codespan">validation.service.ts</code>. The first step I do within the
+    <code class="w3-codespan">validation.service.spec.ts</code> is to remove the test bed
+    configurations since the testing of the form validator doesn't need a component generated.
+    We will use a new <code class="w3-codespan">FormControl</code> for the validation testing.
+</p>
+
+<p>
+    The first two tests will test if the service can be created and second test that
+    the input "111-11-1111" is a valid input.<br>
+
+    <div class="w3-container  blog-image ">
+        <img src="../static/images/image0002.png">
+    </div>
+</p>
+
+<p>
+    Next we will go onto testing four test cases that should be invalid.
+
+    <div class="w3-container  blog-image ">
+        <img src="../static/images/image0003.png">
+    </div>
+</p>
+
+<P>
+    Now we can run our tests at the command line and see if they pass.
+    <div class="w3-code notranslate">
+        C:\>ng test <br>
+    </div><br>
+
+    <div class="w3-container  blog-image ">
+        <img src="../static/images/image0004.png">
+    </div>
+    
+    They all passed!
+</P>
+
+<h3>
+    Using Our Service in a Reactive Form
+</h3>
+
+<p>
+    Now we have a tested form validator lets create a reactive form to use it. Our first step
+    is to add the <code class="w3-codespan">ReactiveFormsModule</code> within the
+    <code class="w3-codespan">app.module.ts</code> so it can be used within a component.
+    <br>
+    <div class="w3-container  blog-image ">
+        <img src="../static/images/image0005.png">
+    </div>
+</p>
+
+<p>
+    Generate the component that will house our Reactive Form.
+    <div class="w3-code notranslate">
+        C:\>ng generate component form
+    </div>
+</p>
+
+<p>
+    Now we will setup our form to accept the custom validation from our service and display an
+    error message if the Social Security number input is not valid.<br>
+
+    <div class="w3-container  blog-image ">
+        <img src="../static/images/image0006.png">
+    </div>
+</p>
+
+<p>
+    This is the final view from the browser.
+
+    <div class="w3-container  blog-image ">
+        <img src="../static/gif/animation0001.gif">
+    </div>
+</p>
+
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-transparent w3-padding-32 w3-margin-top">
+    Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+</body>
+</html>

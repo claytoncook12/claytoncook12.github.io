@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* body */
+body {  
+    height: 100vh;
+    margin: 0;
+    font-family: 'Architects Daughter', sans-serif;
+}
+
+.footer {
+    text-align: center;
+    color: #006e0f;
+}
+
+.self-link {
+    color: #00d41c; 
+}

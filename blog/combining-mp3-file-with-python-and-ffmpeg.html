@@ -95,32 +95,32 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <div class="w3-card-4 w3-margin w3-white">
   <div class="w3-display-container">
-    <img src="../static/images/luca-bravo-lWAOc0UuJ-A-unsplash.jpg" alt="image_1400x440" 
+    <img src="../static/images/daniel-schludi-mbGxz7pt0jM-unsplash.jpg" alt="image_1400x440" 
     style="width:100%"
     >
     
-    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@schluditsch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Daniel Schludi</a> on <a href="https://unsplash.com/photos/mbGxz7pt0jM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
     
   </div>
   <div class="w3-container w3-content">
-    <h1><b><u>Setting Up A Python Project</u></b></h1>
-    <h5><span class="w3-opacity">October 24, 2022</span></h5>
+    <h1><b><u>Combining MP3 Files with Python and FFmpeg</u></b></h1>
+    <h5><span class="w3-opacity">February 13, 2023</span></h5>
     <div class="w3-row">
       Tags:<br>
       
         
           <span 
             class="w3-tag w3-light-grey w3-hover-green"
-            onclick="location.href='..//tag/Programming.html'"
+            onclick="location.href='..//tag/Python.html'"
           >
-            Programming
+            Python
           </span>
         
           <span 
             class="w3-tag w3-light-grey w3-hover-green"
-            onclick="location.href='..//tag/Python.html'"
+            onclick="location.href='..//tag/FFmpeg.html'"
           >
-            Python
+            FFmpeg
           </span>
         
       
@@ -131,18 +131,43 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- Blog -->
     <div class="w3-margin-bottom">
       <p>
-    This is just a quick reference for command line commands I use for setting up
-    a python project with <code class="w3-codespan">venv</code> on windows.
+    I love listening to audio books. My local library has a very good selection of
+    audio books on cd and I found my self burning a lot of audio cds into mp3 files.
+    Once I had the files downloaded I was wanting an easy way to combine all the audio
+    files from the cd collection into a single audio file so I didn't have to worry
+    about keeping track of the individuals files.
 </p>
-
-<div class="w3-code notranslate">
-    py -m venv venv <br>
-    venv\Scripts\activate <br>
-</div>
 
 <p>
-    Now I have a python virtual environment setup and activated.
+    So the solution I came up with was to write a python script that could issue a
+    command line call to <a href="https://ffmpeg.org/" target="_blank">FFmpeg</a>
+    after scanning the current directory for all <code class="w3-codespan">mp3</code>
+    files. What I came up with is below.
 </p>
+
+<figcaption class="w3-center">
+    Combine Audio Files Script
+</figcaption>
+    <pre>
+<code class="language-py">// combine-audio-files.py
+import os
+
+def run():
+    filenames = []
+
+    for filename in os.listdir(os.getcwd()):
+        if (filename.endswith(".mp3")):
+            filenames.append(filename)
+        else:
+            continue
+
+    filenames_string = "".join([str(filename+'|') for filename in filenames])
+
+    ran_code = os.system(f'ffmpeg -i "concat:{filenames_string}" -acodec copy output.mp3')
+    print(ran_code)
+    
+if __name__ == '__main__':
+    run()</code></pre>
     </div>
 
     <div class="w3-row">

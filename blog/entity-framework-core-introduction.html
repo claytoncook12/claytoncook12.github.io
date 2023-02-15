@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+  
+    <link rel="stylesheet" href="../static/css/w3.css">
+  
+    <link rel="stylesheet" href="../static/css/blog.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div class="w3-bar w3-white" style="border-bottom: #4BAF50 4px solid;">
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="../index.html" style="text-decoration: none;">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="../index.html">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="../index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <!-- <a href="#"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a> -->
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="myFunction()">&#9776;</a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <!-- <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a> -->
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/michael-benz--IZ2sgQKIhM-unsplash.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@michaelbenz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Benz</a> on <a href="https://unsplash.com/wallpapers/nature/forest?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Introduction of Database Design and Entity Framework Core 2.2.1</u></b></h1>
+    <h5><span class="w3-opacity">NEED DATE</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='..//tag/DotNET.html'"
+          >
+            DotNET
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='..//tag/C-Sharp.html'"
+          >
+            C-Sharp
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='..//tag/Database.html'"
+          >
+            Database
+          </span>
+        
+      
+    </div>
+
+    <hr>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <h2>Relational Database Design General Concepts</h2>
+<p>
+    A few short database design concepts that I picked up from the Database Design and Basic SQL in PostgreSQL
+    (University of Michigan) course on Coursera.
+    <ul>
+        <li>Start With a Picture</li>
+        <li>Don't store the same string data twice - use a relationship instead</li>
+        <li>One thing in "real world" and only one thing in the database</li>
+        <li>
+            When creating a database start with the most central object (generally the user object)
+            and build your relationships out
+        </li>
+    </ul>
+</p>
+
+<p>
+    Three types of keys
+    <ul>
+        <li>Primary Key - generally an integer auto-increment field</li>
+        <li>Logical Key - what outside world uses for lookup</li>
+        <li>Foreign Key - generally an integer key pointing to a row in another table</li>
+    </ul>
+</p>
+
+<p>
+    Data Normalization
+    <ul>
+        <li>Do not replicate data, point to data</li>
+        <li>Use integers for Keys and for reference</li>
+    </ul>
+</p>
+
+<h2>What is Entity Framework Core (EF Core)?</h2>
+
+<p>
+    EF Core is an object-relational mapper (ORM) that acts as a bridge between .NET objects and a relational database.
+    The benefit in using an ORM is that you an interact with objects within your code instead of using SQL statements.
+</p>
+
+<h2>Example Project (Console App)</h2>
+
+    <p>
+        Starting database picture.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0007.png" alt="starting-picture">
+        </div>
+    </p>
+
+    <p>
+        Next we will create a console app within Visual Studio 2022 and added the needed NuGet packages.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0008.png" alt="console-app-create">
+        </div>
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0009.png" alt="nuget-packages">
+        </div>
+    </p>
+
+<h2>Creating a Database From EF Core Code</h2>
+    <h3>First Entity</h3>
+
+    <p>
+        An entity is an EF Core object that maps to one or more tables
+        in a database. This is the basic building block in EF Core. We will
+        create our first entity, Student.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0010.png" alt="student-entity">
+        </div>
+    </p>
+    
+    <h3>Setup Database Context</h3>
+    <p>
+        Now we will setup the database context. This database context is the interface EF Core has between
+        the C# code and the database. We will setup a database context for a local SQLite database.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0011.png" alt="database-context-sqlite">
+        </div>
+    </p>
+
+    <h3>Make Migration and Apply Updates</h3>
+    <p>
+        So now that there is an entity and the database context is setup we can apply those to a database.
+        The state of the database is managed and monitored through Migrations. These migrations need to be
+        applied to the database to ensure that the database matches the C# code. We can apply these
+        migrations within the <code>Package Manager Console</code> in Visual Studio 2022.
+
+        <div class="w3-code notranslate"><pre>
+Add-Migration [Migration Name]
+Update-Database
+</pre></div>
+
+        Once those migrations are applied then EF Core will add a <code>Migrations</code> folder that keeps
+        information about the state of the database.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0012.png" alt="database-migrations-applied">
+        </div>
+
+    </p>
+
+<h2>Adding and Updating Database Information</h2>
+    <p>
+        Adding student data to the database.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0013.png" alt="adding-student-data">
+        </div>
+    </p>
+
+    <p>
+        Then updating that information in the database.
+        
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0014.png" alt="updating-student-data">
+        </div>
+    </p>
+
+<h2>Navigation Properties</h2>
+
+    <p>
+        Navigation Properties is how EF Core establishes connections between entities. EF Core then 
+        converts these into database relationships. A database <b>one-to-many</b> relationship is where one
+        record in a table can be associated with one or more records in another table. In our example
+        this is the Classes to Teacher Table Connection. A database <b>many-to-many</b> relationship is 
+        where multiple records in a table can be associated with multiple records in another table.
+        In our example this is the StudentClasses Table
+    </p>
+
+<h3>One-to-many Relationship</h3>
+
+    <p>
+        Adding student data to the database.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0015.png" alt="adding-teacher-to-classes">
+        </div>
+    </p>
+
+    <p>
+        Then updating that information in the database.
+        
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0016.png" alt="teacher-list-to-classes">
+        </div>
+    </p>
+
+    <p>
+        Then adding EF models to DbContext then <code>Add-Migration</code> and <code>Update-Database</code>
+        
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0017.png" alt="adding-ef-dbcontext">
+        </div>
+    </p>
+
+    <p>
+        Creating some <code>Teacher</code> and <code>Class</code> data.
+        
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0018.png" alt="add-data">
+        </div>
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0019.png" alt="sqlite-data-view">
+        </div>
+    </p>
+
+<h3>Many-to-many Relationship</h3>
+
+    <p>
+       Now we will create a <b>many-to-many</b> relationship.
+       
+       <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0020.png" alt="many-to-many-StudentClass">
+        </div>
+    </p>
+
+    <p>
+        Add navigation properties to <code>Class</code> and <code>Student</code> entities.
+        
+        <div class="w3-container  w3-center w3-padding-small">
+             <img class="w3-image" src="../static/images/image0021.png" alt="many-to-many-Class-and-Student">
+         </div>
+     </p>
+
+     <p>
+        Add navigation properties to <code>Class</code> and <code>Student</code> entities.
+        
+        <div class="w3-container  w3-center w3-padding-small">
+             <img class="w3-image" src="../static/images/image0021.png" alt="many-to-many-Student">
+         </div>
+
+         <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0022.png" alt="many-to-many-Class">
+        </div>
+     </p>
+
+     <p>
+        Add Fluent API to <code>OnModelCreating</code> in <code>DatabaseContext</code> to establish
+        connection.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0023.png" alt="many-to-many-conection">
+        </div>
+
+        Look at the connection in the migration.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0024.png" alt="many-to-many-conection">
+        </div>
+     </p>
+
+     <p>
+        Adding data to the database.
+
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0025.png" alt="adding-many-to-many-1">
+        </div>
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0026.png" alt="adding-many-to-many-2">
+        </div>
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0027.png" alt="adding-many-to-many-3">
+        </div>
+        <div class="w3-container  w3-center w3-padding-small">
+            <img class="w3-image" src="../static/images/image0028.png" alt="adding-many-to-many-4">
+        </div>
+     </p>
+
+     <p>
+        Then can use <code>.Include()</code> and <code>.ThenInclude()</code> to add together connected
+        data.
+
+        <div class="w3-container  w3-center">
+            <img class="w3-image" src="../static/images/image0029.png" alt="using-include">
+        </div>
+     </p>
+
+<h2>References</h2>
+
+    <p>
+        <ul>
+            <li>Beginning Entity Framework Core 5 From Novice to Professional (2021) Eric Vogel</li>
+            <li>Database Design and Basic SQL in PostgreSQL (University of Michigan) through Cousera</li>
+            <li>
+                <a href="https://www.fearofoblivion.com/dont-let-ef-call-the-shots" target="_blank">
+                    https://www.fearofoblivion.com/dont-let-ef-call-the-shots
+                </a>
+            </li>
+            <li>Getting Started with Entity Framework Core [1 of 5] | Entity Framework Core for Beginners</li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=SryQxUeChMc"  target="_blank">
+                    https://www.youtube.com/watch?v=SryQxUeChMc
+                </a>
+            </li>
+            <li>
+                <a href="https://learn.microsoft.com/en-us/ef/core/"  target="_blank">
+                    https://learn.microsoft.com/en-us/ef/core/
+                </a>
+            </li>
+        </ul>
+    </p>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+<!-- Prism Code Highlights -->
+<script src="../static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function myFunction() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+</body>
+</html>

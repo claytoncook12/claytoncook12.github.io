@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+  
+    <link rel="stylesheet" href="../static/css/w3.css">
+  
+    <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div 
+  class="w3-bar w3-white" 
+  style="border-bottom: #4BAF50 4px solid;box-shadow:0 2px 15px 0 rgba(0,0,0,0.16)"
+>
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="../index.html" style="text-decoration: none;">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="../index.html">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="../index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <!-- <a href="#"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a> -->
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="myFunction()">&#9776;</a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <!-- <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a> -->
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/ganapathy-kumar-L75D18aVal8-unsplash.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@gkumar2175?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ganapathy Kumar</a> on <a href="https://unsplash.com/images/nature/desert?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Using Interfaces to Ensure Behavior</u></b></h1>
+    <h5><span class="w3-opacity">Febuary 23, 2023</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/interface.html'"
+          >
+            Interface
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/protocol.html'"
+          >
+            Protocol
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/c.html'"
+          >
+            C#
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/python.html'"
+          >
+            Python
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/typescript.html'"
+          >
+            Typescript
+          </span>
+        
+      
+    </div>
+
+    <hr>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <h2>What is an Interface?</h2>
+
+<p>
+    An interface (called this in C# and Typescript) or protocol (called this in Python)
+    contains definitions for a groups of related behaviors
+    that a class can implement. The great benefit of using interfaces
+    is that we can guarantee how a class will behave without the
+    need for inheritance.
+</p>
+
+<p>
+    Interfaces show how certain classes are related to one another.
+    Two classes that have the same interface
+    will have shared behaviors. In <i>the Pragmatic Programmer</i> states this benefit
+    Tip 52 <i>"Prefer Interfaces to Express Polymorphism"</i>. With an added statement
+    that  <i>"interfaces and protocols give us polymorphism without inheritance."</i>
+</p>
+
+<h2>Creating an Interface in 
+    <span><img style="max-height: 32px;" src="../static/images/programming_images/c-sharp.svg" alt="C# image"></span>
+</h2>
+<p>
+    In our <code>C#</code> example we will creating two 2D shape classes
+    what will use an interface to ensure each 2D shape class have similar behavior.
+    We will start by defining our <code>Shape</code> interface within <code>C#</code>
+    by using the <code>interface</code> keyword. This interface will ensure that all
+    class that share this interface have a <code>Height</code> and <code>Width</code>
+    property as well as a <code>Area</code> method. It is typical practice in <code>C#</code>
+    to define the interface with a <code>I</code> at the beginning of the name.
+</p>
+
+<h4 class="w3-center"><u><code>C# IShape Interface</code></u></h4>
+<p>
+<pre><code class="language-cs">interface IShape
+{
+    // Properties
+    double Height { get; }
+    double Width { get; }
+    // Method
+    double Area();
+}</code></pre>
+</p>
+
+<p>
+    Now that we have our <code>interface</code> defined we can use it with the <code>":"</code>
+    notation to ensure that our <code>Rectangle</code> and <code>Triangle</code> class have the
+    same behavior by checking that they have the proper properties and methods.
+</p>
+
+<h4 class="w3-center"><u><code>C# Rectangle Class</code></u></h4>
+<p>
+<pre><code class="language-cs">class Rectangle : IShape
+{
+    public Rectangle(
+        double height,
+        double width
+    )
+    {
+        Height = height;
+        Width = width;
+    }
+    public double Height { get; }
+    public double Width { get; }
+    public double Area()
+    {
+        return Height * Width;
+    }
+}</code></pre>
+</p>
+
+<h4 class="w3-center"><u><code>C# Triangle Class</code></u></h4>
+<p>
+<pre><code class="language-cs">class Triangle:IShape
+{
+    public Triangle(
+        double height,
+        double width
+    )
+    {
+        Height = height;
+        Width = width;
+    }
+    public double Height { get; }
+    public double Width { get; }
+    public double Area()
+    {
+        return 0.5 * Height * Width;
+    }
+}</code></pre>
+</p>
+
+<p>
+    With those class in place we can run a console program to create a
+    Rectangle and Triangle object and be certain that we can call the
+    <code>Area()</code> method to return the area of the shape.
+</p>
+
+<h4 class="w3-center"><u><code>C# Console App</code></u></h4>
+<p>
+<pre><code class="language-cs">using System;
+
+namespace Interfaces
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Rectangle rectangle1 = new Rectangle(1, 4);
+            Console.WriteLine($"Rectange Area:");
+            Console.WriteLine($"{rectangle1.Area()}");
+
+            Triangle triangle1 = new Triangle(1, 4);
+            Console.WriteLine($"Triangle Area:");
+            Console.WriteLine($"{triangle1.Area()}");
+        }
+    }
+}</code></pre>
+</p>
+
+<h4 class="w3-center"><u><code>C# Console Output</code></u></h4>
+<p>
+<pre><code class="language-powershell">Rectange Area:
+4
+Triangle Area:
+2</code></pre>
+</p>
+
+<h2>Creating an Interface (Protocol) in 
+    <span><img style="max-height: 32px;" src="../static/images/programming_images/python.svg" alt="python image"></span>
+</h2>
+
+<p>
+    Now I will give an example of in the <code>Python</code> programming language. Within
+    python interfaces are called <code>Protocol</code> and can be imported from the
+    <code>typing</code> standard python module. The Protocol class was first added
+    in Python 3.8. Since python is a dynamically typed program the point at which the
+    Protocol is check is not when the class is created, as in <code>C#</code> above, but when the class
+    is going to be used by a function. In the example this is when the <code>area()</code> function
+    is called and the <code>Shape2DProtocol</code> type is checked. Also, important to note is the
+    use of <i>...</i> within the functions defined in a <code>Protocol</code>.
+</p>
+
+<h4 class="w3-center"><u><code>Python Interface(Protocol) Example</code></u></h4>
+<p>
+<pre><code class="language-python"># Python 3.10.0
+from typing import Protocol
+
+class Shape2DProtocol(Protocol):
+    height: float
+    width: float
+    
+    def area(self) -> float:
+        ...                  # <- Note Use of "..." for protocol method
+
+def area(shape: Shape2DProtocol) -> float:
+    return shape.area()
+
+class Rectangle:
+    def __init__(self, height: float, width: float) -> None:
+        self.height = height
+        self.width = width
+    
+    def area(self) -> float:
+        return self.height * self.width
+    
+class Triangle:
+    def __init__(self, height: float, width: float) -> None:
+        self.height = height
+        self.width = width
+    
+    def area(self) -> float:
+        return 0.5 * self.height * self.width
+
+class Sphere:
+    def __init__(self, radius: float) -> None:
+        self.radius = radius
+    
+    def volume(self) -> float:
+        return (4/3) * 3.14 * self.radius ** 3
+
+if __name__=="__main__":
+    print(area(Rectangle(1,4)))
+    print(area(Triangle(1,4)))
+    print(area(Sphere(4)))    # <- Will Give Error with Python Type Checker MyPy
+                              #    before the script is run</code></pre>
+</p>
+
+<h4 class="w3-center"><u><code>Python Type Error in Visual Studio Code</code></u></h4>
+<div class="w3-container  w3-center w3-padding-small">
+    <img class="w3-image" src="../static/images/image0030.png" alt="Error in Python">
+</div>
+
+<h2>Creating an Interface in 
+    <span><img style="max-height: 32px; vertical-align: top;" src="../static/images/programming_images/typescript.svg" alt="typescript image"></span>
+</h2>
+<p>
+    Now I will give the same example in the <code>Typescript</code> programming language. This example is
+    very similar to the <code>Python</code> code example above. The place where the interface is
+    checked is at the time of use in the <code>area()</code> function.
+</p>
+
+<pre><code class="language-typescript">interface Shape2D {
+    // Properties
+    height: number;
+    width: number;
+    // Method
+    area(): number;
+}
+
+function area(shape:Shape2D): number {
+    return shape.area();
+}
+
+class Rectangle {
+    height: number;
+    width: number;
+
+    constructor(height: number, width: number) {
+        this.height = height;
+        this.width = width;
+    }
+
+    area(): number {
+        return this.height * this.width;
+    }
+}
+
+class Triangle {
+    height: number;
+    width: number;
+
+    constructor(height: number, width: number) {
+        this.height = height;
+        this.width = width;
+    }
+
+    area(): number {
+        return 0.5 * this.height * this.width;
+    }
+}
+
+class Sphere {
+    radius: number;
+
+    constructor(radius: number) {
+        this.radius = radius;
+    }
+
+    volume(): number {
+        return (4/3) * 3.14 * this.radius ** 3;
+    }
+}
+
+console.log(area(new Rectangle(1,4)));
+console.log(area(new Triangle(1,4)));
+console.log(area(new Sphere(4))); // <- Will Show Error when Compiled Due to
+                                  //    Interface Error</code></pre>
+
+<h4 class="w3-center"><u><code>Typescript Type Error in Visual Studio Code</code></u></h4>
+<div class="w3-container  w3-center w3-padding-small">
+    <img class="w3-image" src="../static/images/image0031.png" alt="Error in Typescript">
+</div>
+
+<h3>Additional Resources</h3>
+<p>
+    <ul>
+        <li>
+            <a  class="w3-hover-text-green"
+                href="https://www.codecademy.com/courses/learn-c-sharp/lessons/csharp-interfaces/exercises/introduction-to-interfaces" target="_blank">
+                Codeacademy: Learn C# Introduction to Interfaces
+            </a>
+        </li>
+        <li>
+            <a  class="w3-hover-text-green"
+                href="https://www.youtube.com/watch?v=xvb5hGLoK0A" target="_blank">
+                Protocol Or ABC In Python - When to use which one?
+            </a>
+        </li>
+        <li>
+            <a  class="w3-hover-text-green"
+                href="https://www.pythontutorial.net/python-oop/python-protocol/" target="_blank">
+                https://www.pythontutorial.net/python-oop/python-protocol/
+            </a>
+        </li>
+        <li>
+            <a  class="w3-hover-text-green"
+                href="https://andrewbrookins.com/technology/building-implicit-interfaces-in-python-with-protocol-classes/" target="_blank">
+                https://andrewbrookins.com/technology/building-implicit-interfaces-in-python-with-protocol-classes/
+            </a>
+        </li>
+        <li>
+            <a  class="w3-hover-text-green"
+                href="https://www.typescriptlang.org/docs/handbook/2/objects.html" target="_blank">
+                Typescript Handbook v2 Object Types
+            </a>
+        </li>
+    </ul>
+</p>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+<!-- Prism Code Highlights -->
+<script src="../static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function myFunction() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+</body>
+</html>

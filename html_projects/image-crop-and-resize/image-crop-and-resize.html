@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Crop and Resize</title>
+    <link rel="shortcut icon" type="image/svg" href="img/cc_cog.svg"/>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      body {
+        background-color: rgb(43, 43, 43);
+        overflow-x: hidden;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        padding: 10px;
+      }
+      .footer {
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px 0;
+        width: 90vw;
+        max-width: 1600px;
+      }
+
+      .image-working-space {
+        margin: 0 auto;
+        width: 90vw;
+        max-width: 1600px;
+      }
+      .image-working-space .image-placeholder {
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+      }
+
+      .image-container {
+        position: relative;
+        padding: 10px;
+        max-width: 1600px;
+      }
+      .image {
+        position: absolute;
+        left: 2px; /*Set offset For 2px border in overlay */
+        top: 2px;
+        max-width: 1400px;
+      }
+      .overlay {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        border: 2px dashed red;
+      }
+
+      .controls-container {
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px 0;
+        width: 90vw;
+        max-width: 1600px;
+      }
+      .controls {
+        display: block;
+        margin: 0 auto;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+      .controls input {
+        color: black;
+      }
+      .controls button {
+        color: black;
+        margin: 2px;
+      }
+      .controls input {
+        width: 50px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-working-space">
+          <h1>Crop Image</h1>
+          <div class="image-placeholder">
+            <img src="img/add-image-icon.svg" id="temp-image">
+          </div>
+          <div class="image-container" hidden>
+              <img class="image" src="" id="working-image">
+              <div class="overlay" hidden></div>
+          </div>
+        </div>
+        <div class="controls-container">
+          <div class="controls">
+              <h3>Image Crop Parameters</h3>
+              <label for="cropX">X Value Top Left:</label>
+              <input type="number" min="0" id="cropX" name="cropX"><br>
+              <label for="cropY">Y Value Top Left:</label>
+              <input type="number" min="0" id="cropY" name="cropY"><br>
+              <label for="cropXLength">Crop X Length:</label>
+              <input type="number" min="0" id="cropXLength" name="cropXLength"><br>
+              <label for="cropYLength">Crop Y Length:</label>
+              <input type="number" min="0" id="cropYLength" name="cropYLength"><br>
+              <button onclick="reset();">Reset Overlay</button><br>
+              <button onclick="saveCropImage();">Save Crop Image</button><br>
+              <button class="choose-img">Load Image</button>
+          </div>
+        </div>
+        <div class="footer">
+          Icons by <a href="https://freeicons.io/profile/726">Free Preloaders</a> on <a href="https://freeicons.io">freeicons.io</a><br>
+          Website By Clayton Cook
+        </div>
+    </div>
+
+    <!-- File Input -->
+    <input type="file" class="file-input" accept="image/*" hidden>
+
+    <!-- SnackBar Tips -->
+    <div id="snackbar">Default Text</div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

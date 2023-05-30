@@ -72,12 +72,20 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
         About
       </a>
-      <!-- <a href="#"
+      <a onclick="dropDownClick()"
         class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
-        Music
-      </a> -->
+        <i id="large-nav-caret" class="fa fa-caret-down"></i>
+      </a>
       <a href="javascript:void(0)" 
-        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="myFunction()">&#9776;</a>
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="accordionExpand()">
+          &#9776;
+      </a>
+    </div>
+    <div class="w3-center w3-hide" id="additional-links-display">
+      <a href="../favorite_links.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
     </div>
   
     <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
@@ -90,9 +98,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
       <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
         About
       </a>
-      <!-- <a href="#" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
-        Music
-      </a> -->
+      <a onclick="dropDownClickSmaller()" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="small-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+    </div>
+    <div class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="additional-links-display2">
+      <a href="../favorite_links.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
     </div>
   </div>
 </div>
@@ -203,12 +216,38 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Navigation Script -->
 <script>
-  function myFunction() {
+  function accordionExpand() {
     var x = document.getElementById("navbar-id");
     if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
     } else { 
       x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+<script>
+  function dropDownClick() {
+    var x = document.getElementById("additional-links-display");
+    var y = document.getElementById("large-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+<script>
+  function dropDownClickSmaller() {
+    var x = document.getElementById("additional-links-display2");
+    var y = document.getElementById("small-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
     }
   }
 </script>

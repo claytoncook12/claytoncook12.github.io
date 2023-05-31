@@ -122,19 +122,20 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
     <div class="w3-col w3-card-4 l8 s12 w3-white">
         <div class="w3-container" style="padding-bottom: 15px;">
-
-            <h2 class="w3-center">Favorite Links</h2>
+            <h2 class="w3-center">
+                <img src="static/images/icons8-link-50.png"><br>
+                Favorite Links
+            </h2>
 
             <p class="w3-left-align">
                 This is just a list of my favorite pages on the internet listed
                 by topic.
             </p>
 
-            <h3 class="w3-left-align">
-                Tech Teaching
+            <h3 class="w3-left-align" onclick="w3HideById('TechTeachingList')" style="cursor: pointer;">
+                Tech Teaching <i class="fa fa-caret-down fa-xs"></i>
             </h3>
-            <p class="w3-left-align">
-            <ul class="w3-left-align">
+            <ul class="w3-left-align" id="TechTeachingList">
                 <li>
                     <a href="https://exercism.org/" target="_blank">
                         Exercism
@@ -178,13 +179,11 @@ and is wrapped around the whole page content, except for the footer in this exam
                     - Angular + Web
                 </li>
             </ul>
-            </p>
 
-            <h3 class="w3-left-align">
-                Tech Tools
+            <h3 class="w3-left-align" onclick="w3HideById('TechToolsList')" style="cursor: pointer;">
+                Tech Tools <i class="fa fa-caret-down  fa-xs"></i>
             </h3>
-            <p class="w3-left-align">
-            <ul class="w3-left-align">
+            <ul class="w3-left-align" id="TechToolsList">
                 <li>
                     <a href="https://www.cakewalk.com/" target="_blank">
                         CakeWalk
@@ -223,13 +222,29 @@ and is wrapped around the whole page content, except for the footer in this exam
                     - Online ABC JS Quick Editor
                 </li>
             </ul>
-            </p>
 
-            <h3 class="w3-left-align">
-                Music
+            <h3 class="w3-left-align" onclick="w3HideById('Images/IconsList')" style="cursor: pointer;">
+                Images/Icons <i class="fa fa-caret-down fa-xs"></i>
             </h3>
-            <p class="w3-left-align">
-            <ul class="w3-left-align">
+            <ul class="w3-left-align" id="Images/IconsList">
+                <li>
+                    <a href="https://icons8.com/" target="_blank">
+                        Icons8
+                    </a>
+                    - Wonderful place for Icons
+                </li>
+                <li>
+                    <a href="https://unsplash.com/" target="_blank">
+                        Unsplash
+                    </a>
+                    - Free Online High Quality Photos
+                </li>
+            </ul>
+
+            <h3 class="w3-left-align" onclick="w3HideById('IrishFluteList')" style="cursor: pointer;">
+                Irish Flute <i class="fa fa-caret-down fa-xs"></i>
+            </h3>
+            <ul class="w3-left-align" id="IrishFluteList">
                 <li>
                     <a href="https://www.youtube.com/@hatao" target="_blank">
                         Hatao`s Irish Tune of the Day
@@ -248,13 +263,44 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </a>
                     - Guided online sessions and tunes taught by Shannon and Matt Heaton.
                 </li>
+            </ul>
 
-                <div class="w3-row w3-left-align">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border" type="button"
-                            onclick="location.href='index.html'">
-                            <b>Back to Home</b>
-                        </button></p>
-                </div>
+            <h3 class="w3-left-align" onclick="w3HideById('GuitarList')" style="cursor: pointer;">
+                Guitar <i class="fa fa-caret-down fa-xs"></i>
+            </h3>
+            <ul class="w3-left-align" id="GuitarList">
+                <li>
+                    <a href="https://www.youtube.com/@fretscience" target="_blank">
+                        Fret Science
+                    </a>
+                    - Fantastic video on how the guitar fret board
+                </li>
+            </ul>
+
+            <h3 class="w3-left-align" onclick="w3HideById('MelodyAndSongWritingList')" style="cursor: pointer;">
+                Melody and Song Writing <i class="fa fa-caret-down fa-xs"></i>
+            </h3>
+            <ul class="w3-left-align" id="MelodyAndSongWritingList">
+                <li>
+                    <a href="https://www.youtube.com/@htws" target="_blank">
+                        Ryan Leach
+                    </a>
+                    - Teaching on Understanding how to write melody and music composition
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@htws" target="_blank">
+                        How to Write Songs
+                    </a>
+                    - Great teaching on how to write a song
+                </li>
+            </ul>
+
+            <div class="w3-row w3-left-align">
+                <p><button class="w3-button w3-padding-large w3-white w3-border" type="button"
+                        onclick="location.href='index.html'">
+                        <b>Back to Home</b>
+                    </button></p>
+            </div>
         </div>
     </div>
 </div>
@@ -285,6 +331,17 @@ and is wrapped around the whole page content, except for the footer in this exam
 </footer>
 
 <!-- Javascript Files -->
+
+<script>
+    function w3HideById(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-hide") == -1) {
+        x.className += " w3-hide";
+      } else {
+        x.className = x.className.replace(" w3-hide", "");
+      }
+    }
+</script>
 
 
 <!-- Prism Code Highlights -->

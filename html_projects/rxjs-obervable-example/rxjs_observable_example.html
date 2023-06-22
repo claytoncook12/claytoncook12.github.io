@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RxJS Observable Example</title>
+    <link rel="shortcut icon" type="image/svg" href="img/cc_cog.svg"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: rgb(255, 255, 255);
+        }
+
+        body {
+            background-color: rgb(43, 43, 43);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 95vw;
+            height: 100vh;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            padding: 10px;
+        }
+
+        .info {
+            margin: 30px auto;
+            max-width: 500px;
+        }
+
+        button {
+            background: #000;
+            margin-top: 15px;
+            padding: 5px;
+            border-radius: 3px;
+            border: #fff solid 1px;
+        }
+        
+        #userId {
+            color: black;
+            text-align: center;
+        }
+
+        /* Users Profile Div */
+        .users {
+            margin: 10px auto;
+            width: 300px;
+            height: 80px;
+            border-radius: 80px;
+        }
+
+        .users > .left {
+            width: 30%;
+            height: 100%;
+            float: left;
+            background-color: rgb(80, 80, 80);
+            border-top-left-radius: 80px;
+            border-bottom-left-radius: 80px;
+        }
+
+        .users > .left > img {
+            border-radius: 80px;
+            height: 100%;
+            width: 80px;
+            object-fit: cover;
+            float: left
+        }
+
+        .users > .right {
+            width: 70%;
+            height: 100%;
+            float: right;
+            background-color: rgb(80, 80, 80);
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 80px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .users > .right > .rightText {
+            text-align: left;
+        }
+    </style>
+    <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>RxJS 7.8.1 Observable Example</h1>
+        <p class="info">
+            Select the Users Id and then "Load User" to
+            pull in fake data from <a href="https://reqres.in/">Reqres</a>.
+            A wonderful real API to pull in fake data.
+        </p>
+        <label for="userId">User Id To Look Up:</label>
+        <input type="number" id="userId" name="userId" step="1" value="1" min="1" max="13"><br>
+        <button id="loadUsers" onclick="makeRequest()">Load User</button>
+        <div id="data">
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

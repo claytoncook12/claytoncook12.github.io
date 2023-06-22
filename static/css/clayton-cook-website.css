@@ -1,4 +1,33 @@
 .blog-image {
-    width: 80%;
-    overflow: auto;
+  width: 80%;
+  overflow: auto;
+}
+
+a:hover {
+  color: #4bae50;
+}
+
+.w3-tag {
+  cursor: pointer;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.slow-rotate {
+  animation: rotation 60s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }

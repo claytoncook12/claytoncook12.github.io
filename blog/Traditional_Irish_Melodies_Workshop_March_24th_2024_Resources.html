@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+  
+    <link rel="stylesheet" href="../static/css/w3.css">
+  
+    <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div 
+  class="w3-bar w3-white" 
+  style="border-bottom: #4BAF50 4px solid;box-shadow:0 2px 15px 0 rgba(0,0,0,0.16)"
+>
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="../index.html" style="text-decoration: none;">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="../index.html">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="../index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClick()"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="large-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="accordionExpand()">
+          &#9776;
+      </a>
+    </div>
+    <div class="w3-center w3-hide" id="additional-links-display">
+      <a href="../favorite_links.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClickSmaller()" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="small-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+    </div>
+    <div class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="additional-links-display2">
+      <a href="../favorite_links.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/ira-selendripity-qUpzRaylopM-unsplash.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@selendripity?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ira Selendripity</a> on <a href="https://unsplash.com/photos/brown-string-instrument-qUpzRaylopM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></div>
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Traditional Irish Melodies Workshop March 24th, 2024 Resources</u></b></h1>
+    <h5><span class="w3-opacity">March 27, 2024</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/irish-music.html'"
+          >
+            Irish Music
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/fiddle.html'"
+          >
+            Fiddle
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/banjo.html'"
+          >
+            Banjo
+          </span>
+        
+      
+    </div>
+
+    <hr>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <p>
+    Jannell Canerday and John Walsh conducted a Traditional Irish Melodies workshop
+    at the Louisville Folk School. Talked about the banjo in irish music, fathers of the
+    irish banjo and taught some irish tunes. Below are some audio
+    and sheet music references.
+</p>
+
+
+<h2>Polka: Bhios La I bPort Lairge</h2>
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>Bhios La I bPort Lairge played by Jannell Canerday and John Walsh</b>
+    </figcaption>
+    <audio controls>
+        <source src="../static/audio/Port Lairge (Polka).mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+</div>
+
+<div class="w3-display-container w3-center w3-padding-small">
+    <figcaption class="w3-center">
+        <b>Bhios La I bPort Lairge (polka, translates to A Day in Waterford)</b>
+    </figcaption>
+    <img 
+        src="../static/images/sheet_music/Port Lairge - Polka.png"
+        style="max-width: 800px;"
+        alt="Port Lairge - Polka"
+        class="w3-image"
+    >
+</div>
+
+<h2>Jigs: The Cordal and Vincent Campbell's</h2>
+
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>The Cordal - Vincent Campbell's played by Jannell Canerday and John Walsh</b>
+    </figcaption>
+    <audio controls>
+        <source src="../static/audio/The Cordal - Vincent Campbell's (Jigs).mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+</div>
+
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>The Cordal</b>
+    </figcaption>
+    <img 
+        src="../static/images/sheet_music/The Cordal - Jig.png"
+        style="max-width: 800px;"
+        alt="Port Lairge - Polka"
+        class="w3-image"
+    >
+</div>
+
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>Vincent Campbell's</b>
+    </figcaption>
+    <img 
+        src="../static/images/sheet_music/vincient campbells - jig.png"
+        style="max-width: 800px;"
+        alt="Port Lairge - Polka"
+        class="w3-image"
+    >
+</div>
+
+<h2>Polka: Siege of Ennis</h2>
+
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>Siege of Ennis</b>
+    </figcaption>
+    <img 
+        src="../static/images/sheet_music/Siege of Ennis - Polka.png"
+        style="max-width: 800px;"
+        alt="Port Lairge - Polka"
+        class="w3-image"
+    >
+</div>
+
+<h2>Reels: Jug of Punch - Watchmaker - Shaskeen</h2>
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>Jug of Punch - Watchmaker - Shaskeen played by Jannell Canerday and John Walsh</b>
+    </figcaption>
+    <audio controls>
+        <source src="../static/audio/Jug of Punch - Watchmaker - Shaskeen (Reels).mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+</div>
+
+<h2>Madame Maxwell (aka Planxty Miss Maxwell, by Turlough O'Carolan)</h2>
+<div class="w3-display-container w3-center w3-padding-large">
+    <figcaption class="w3-center">
+        <b>Madame Maxwell played by Jannell Canerday and John Walsh</b>
+    </figcaption>
+    <audio controls>
+        <source src="../static/audio/Madame Maxwell.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+</div>
+
+<h2>References</h2>
+<ul>
+    <li>
+        <a href="https://www.youtube.com/playlist?list=PLVBG58bgjx87KXEz9zUrSbgD35CPfiTdT" target="_blank">
+            Youtube Playlist
+        </a>
+        put together by Jannell for the workshop
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=Xzl82INuM-o" target="_blank">
+            Salute to Barney McKenna
+        </a>
+        from Mick Moloney
+    </li>
+    
+</ul>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+<!-- Prism Code Highlights -->
+<script src="../static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function accordionExpand() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+<script>
+  function dropDownClick() {
+    var x = document.getElementById("additional-links-display");
+    var y = document.getElementById("large-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+<script>
+  function dropDownClickSmaller() {
+    var x = document.getElementById("additional-links-display2");
+    var y = document.getElementById("small-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+</body>
+</html>

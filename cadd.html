@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+
+<link rel="stylesheet" href="static/css/w3.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div 
+  class="w3-bar w3-white" 
+  style="border-bottom: #4BAF50 4px solid;box-shadow:0 2px 15px 0 rgba(0,0,0,0.16)"
+>
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="index.html" style="text-decoration: none;">
+      <img 
+      src="static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="index.html">
+      <img 
+      src="static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="music.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClick()"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="large-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="accordionExpand()">
+          &#9776;
+      </a>
+    </div>
+    <div class="w3-center w3-hide" id="additional-links-display">
+      <a href="favorite_links.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="music.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClickSmaller()" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="small-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+    </div>
+    <div class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="additional-links-display2">
+      <a href="favorite_links.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<!-- Card -->
+<div class="w3-row w3-margin w3-center">
+    <div class="w3-col l2 w3-transparent">
+        <!-- center spacer  for main content-->
+        <p></p>
+    </div>
+    <div class="w3-col w3-card-4 l8 s12 w3-white">
+        <div class="w3-container" style="padding-bottom: 15px;">
+            <h2 class="w3-center">
+                Page for Notes on AutoCAD and Carlson Products
+            </h2>
+
+            <p class="w3-center-align">
+                This is just a list of notes on AutoCadd and Carlson Products I use.
+            </p>
+
+            <h3 class="w3-left-align" onclick="w3HideById('List1')" style="cursor: pointer;">
+                AutoCAD <i class="fa fa-caret-down fa-xs"></i>
+            </h3>
+            <ul class="w3-left-align" id="List1">
+                <li>
+                    <a href="https://help.autodesk.com/view/MAP/2024/ENU/index.html?guid=GUID-FCA4705F-7CAF-4112-A647-904233D3DCC5" target="_blank">
+                        AutoCAD Map 3D 2024 Getting Started
+                    </a>
+                    - Good Place To Get Started on AutoCAD Map 3D
+                </li>
+            </ul>
+
+            <h3 class="w3-left-align" onclick="w3HideById('List2')" style="cursor: pointer;">
+                Carlson <i class="fa fa-caret-down  fa-xs"></i>
+            </h3>
+            <ul class="w3-left-align" id="List2">
+                <li>
+                    <a href="https://carlsonsw.com/webinars" target="_blank">
+                        Carlson Software's Training Webinars
+                    </a>
+                    - Recorded Webinars on Carlson Software
+                </li>
+            </ul>
+
+            <div class="w3-row w3-left-align">
+                <p><button class="w3-button w3-padding-large w3-white w3-border" type="button"
+                        onclick="location.href='index.html'">
+                        <b>Back to Home</b>
+                    </button></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+<script>
+    function w3HideById(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-hide") == -1) {
+        x.className += " w3-hide";
+      } else {
+        x.className = x.className.replace(" w3-hide", "");
+      }
+    }
+</script>
+
+
+<!-- Prism Code Highlights -->
+<script src="static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function accordionExpand() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+<script>
+  function dropDownClick() {
+    var x = document.getElementById("additional-links-display");
+    var y = document.getElementById("large-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+<script>
+  function dropDownClickSmaller() {
+    var x = document.getElementById("additional-links-display2");
+    var y = document.getElementById("small-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+</body>
+</html>

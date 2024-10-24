@@ -10,30 +10,11 @@
 <script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
 <!-- CSS Styles -->
 
-
-  <link rel="stylesheet" href="../static/css/w3.css">
-
-  <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
-
-<style>
-  .iframe-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      padding-top: 56.25%;
-      /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  }
-
-  .responsive-iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-  }
-</style>
+  
+    <link rel="stylesheet" href="../static/css/w3.css">
+  
+    <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+  
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="../static/css/prism.css">
@@ -136,113 +117,31 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Main Content -->
 
 <div class="w3-card-4 w3-margin w3-white">
-  <div class="w3-display-container">
-    <img src="../static/images/ross-parmly-rf6ywHVkrlY-unsplash.jpg" alt="image_1400x440" 
-    style="width:100%"
-    >
-    
-    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Photo by <a href="https://unsplash.com/@rparmly?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ross Parmly</a> on <a href="https://unsplash.com/photos/rf6ywHVkrlY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
-    
-  </div>
   <div class="w3-container w3-content">
-    <h1><b><u>Rescaling Video Files with FFmpeg to Maximizing an Older iPod</u></b></h1>
-    <h5><span class="w3-opacity">May 30, 2023</span></h5>
-    <div class="w3-row">
-      Tags:<br>
-      
-        
-          <span 
-            class="w3-tag w3-light-grey w3-hover-green"
-            onclick="location.href='../tag/ffmpeg.html'"
-          >
-            FFmpeg
-          </span>
-        
-      
-    </div>
-
+    <h1><b>
+      Tag: 
+      <span 
+        class="w3-tag w3-green"
+      >
+        Staking
+      </span>
+    </b></h1>
     <hr>
 
-    <!-- Blog -->
-    <div class="w3-margin-bottom">
-      <p>
-    My daughter was give an older iPod touch fourth-generation with 6.4 Gb of storage. This is great little device since
-    it has a built in camera, she can listen to music, record audio, and watch videos. She loves to run around just 
-    capturing what she sees. We had a trip coming up that would involve being on a plane for 4 hours and I wanted to put
-    some of her favorite shows on her iPod to watch on the plane while traveling.
-</p>
-
-<div class="w3-display-container w3-center">
-    <img 
-    src="../static/images/image0032_ipod_4th_generation.jpg" 
-    alt="iPod 4th generation pink"
-    class="w3-center"
-    style="width:100%;max-width:200px"
-    >
-    <figcaption class="w3-center"><u>
-        iPod 4th Generation
-    </u></figcaption>
-</div>
-
-<p>
-    In an effort to maximize the amount of videos that I could fit on the device I turned to using FFmpeg to reduce the
-    mp4 video files down to a resolution that was watchable on the iPod. With a quick google search I found that I could use
-    the <code class="language-sh">scale</code> command to set a smaller video scale. My original video was a 720x480
-    pixel mp4 file. I could reduce those video down to a smaller 480x360 or 240x180 video size to help with saving space.
-    Below is a list of those FFmpeg scale commands.
-</p>
-
-<figcaption class="w3-center"><u>
-    FFmpeg Video Scaling and Various Resolutions
-</u></figcaption>
-<pre><code class="language-sh"># 720p
-ffmpeg -i input.mp4 -s 720x480 -c:a copy output.mp4
-# 480p
-ffmpeg -i input.mp4 -s 480x360 -c:a copy ouput.mp4
-# 240p
-ffmpeg -i input.mp4 -s 240x180 -c:a copy ouput.mp4</code></pre>
-
-<p>
-    I watched both the 480x360 and 240x180 resolutions on the iPod. I have to say the 480x360 is much
-    better to watch but the 240x180
-    is watchable. My 5 year old daughter didn't seem to care between the two so I went with the 240x180 resolution. 
-    I compared the final file sizes between the three videos and found with the 240x180 resolution I could reduce the
-    storage needed by 43%. Again, not a good video quality but now I could now get roughly 7.31 hrs of video per 1 GB of storage.
-    This is a lot of value to my daughter per GB of storage. 
-</p>
-
-<p>
-    <table class="w3-table-all w3-centered">
-        <tr>
-            <th>Video Resolution</th>
-            <th>Length</th>
-            <th>Size</th>
-            <th>% Original</th>
-        </tr>
-        <tr>
-            <td>720x480</td>
-            <td>22 mins 23 sec</td>
-            <td>150 MB</td>
-            <td> N/A </td>
-        </tr>
-        <tr>
-            <td>480x360</td>
-            <td>22 mins 23 sec</td>
-            <td>89.5 MB</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>240x180</td>
-            <td>22 mins 23 sec</td>
-            <td>51.0 MB</td>
-            <td>34</td>
-        </tr>
-    </table>
-    <figcaption class="w3-center"><u>
-        Comparison of Video Size and Storage Requirements
-    </u></figcaption>
-</p>
-    </div>
+    <!-- Blog entry -->
+    <ul>
+    
+      <li>
+        <span class="w3-opacity">October 24, 2024</span> - 
+<a 
+    href="../blog/Staking_Plan_Creation.html"
+    class="w3-hover-text-blue"
+>
+    Creating A Staking Plan with AutoCad And Carlson Civil 2024
+</a>
+      </li>
+    
+    </ul>
 
     <div class="w3-row">
       <div class="w3-col m8 s12">
@@ -257,7 +156,6 @@ ffmpeg -i input.mp4 -s 240x180 -c:a copy ouput.mp4</code></pre>
     </div>
   </div>
 </div>
-
 
 
 <!-- END w3-content -->

@@ -10,11 +10,30 @@
 <script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
 <!-- CSS Styles -->
 
-  
-    <link rel="stylesheet" href="../static/css/w3.css">
-  
-    <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
-  
+
+  <link rel="stylesheet" href="../static/css/w3.css">
+
+  <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+
+<style>
+  .iframe-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+  }
+</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="../static/css/prism.css">
@@ -117,41 +136,108 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Main Content -->
 
 <div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/dam_5_ramp_image.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+  </div>
   <div class="w3-container w3-content">
-    <h1><b>
-      Tag: 
-      <span 
-        class="w3-tag w3-green"
-      >
-        Carlson
-      </span>
-    </b></h1>
+    <h1><b><u>Creating An Aerial Image From A Drone Flight for Civil Drawings</u></b></h1>
+    <h5><span class="w3-opacity">October 25, 2024</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/civil.html'"
+          >
+            Civil
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/autocad.html'"
+          >
+            AutoCad
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/carlson.html'"
+          >
+            Carlson
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/drone.html'"
+          >
+            Drone
+          </span>
+        
+      
+    </div>
+
     <hr>
 
-    <!-- Blog entry -->
-    <ul>
-    
-      <li>
-        <span class="w3-opacity">October 25, 2024</span> - 
-<a 
-    href="../blog/Drone_Aerial_Image_Creation.html"
-    class="w3-hover-text-blue"
->
-    Creating An Aerial Image From A Drone Flight for Civil Drawings
-</a>
-      </li>
-    
-      <li>
-        <span class="w3-opacity">October 24, 2024</span> - 
-<a 
-    href="../blog/Staking_Plan_Creation.html"
-    class="w3-hover-text-blue"
->
-    Creating A Staking Plan with AutoCad And Carlson Civil 2024
-</a>
-      </li>
-    
-    </ul>
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/i0BYofjD-ls">
+    </iframe>
+</div>
+
+<p>
+    In this recording I walked through the process of creating an aerial image using a drone.
+    My project focused on a boat ramp in Kentucky, where we're working on improvements following a dam removal.
+    I share how I collected and processed drone images to create both a 2D aerial photo.
+</p>
+<p>
+    I started by showcasing the final aerial image. I explain my drone flight
+    planning process using Drone Link, detailing how I set up the drone mission, including flight paths, altitude, and 
+    speed adjustments to ensure proper photo capture.
+</p>
+<p>
+    After flying the mission with my DJI Mini 2 drone, I gathered a series of images. I used ground control points to help
+    ensure accuracy, which I surveyed with a total station on site right before the drone flight.
+    The next step involved processing these images with Web ODM Lightning, where I uploaded the photos and
+    waited for the processing to complete.
+</p>
+<p>
+    Once the model was ready, I moved to AutoCAD, where I used Carlson Civil Suite to georeference the aerial image. I detailed
+    how to input control points, scale the image accurately, and adjust it until it aligned properly with my surveyed points.
+</p>
+<p>
+    Finally, I exported the georeferenced image and demonstrated how to import it back into AutoCAD, verifying that everything
+    lined up correctly. Overall, I hope this breakdown provides a clear understanding of the entire process from planning to execution.
+</p>
+
+<h2>References</h2>
+<ul>
+    <li>
+        <a href="https://www.dronelink.com/" target="_blank">
+            DroneLink
+        </a>
+    </li>
+    <li>
+        <a href="https://webodm.net/" target="_blank">
+            WebODM Lightning
+        </a>
+    </li>
+    <li>
+        <a href="https://www.autodesk.com/products/autocad/overview" target="_blank">
+            AutoCAD
+        </a>
+    </li>
+    <li>
+        <a href="https://www.carlsonsw.com/product/civil-suite" target="_blank">
+            Carlson Civil Suite Software
+        </a>
+    </li>
+</ul>
+    </div>
 
     <div class="w3-row">
       <div class="w3-col m8 s12">
@@ -166,6 +252,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
   </div>
 </div>
+
 
 
 <!-- END w3-content -->

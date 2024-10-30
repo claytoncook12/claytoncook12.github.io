@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+
+  <link rel="stylesheet" href="../static/css/w3.css">
+
+  <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+
+<style>
+  .iframe-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div 
+  class="w3-bar w3-white" 
+  style="border-bottom: #4BAF50 4px solid;box-shadow:0 2px 15px 0 rgba(0,0,0,0.16)"
+>
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="../index.html" style="text-decoration: none;">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="../index.html">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="../index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClick()"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="large-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="accordionExpand()">
+          &#9776;
+      </a>
+    </div>
+    <div class="w3-center w3-hide" id="additional-links-display">
+      <a href="../favorite_links.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClickSmaller()" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="small-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+    </div>
+    <div class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="additional-links-display2">
+      <a href="../favorite_links.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/alexander_ramp_green_river.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Boat Ramp Civil Drawing Creation</u></b></h1>
+    <h5><span class="w3-opacity">October 29, 2024</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/civil.html'"
+          >
+            Civil
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/autocad.html'"
+          >
+            AutoCad
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/carlson.html'"
+          >
+            Carlson
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/plans.html'"
+          >
+            Plans
+          </span>
+        
+      
+    </div>
+
+    <hr>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <p>
+    In these videos, I'm walking through the process of creating a set of civil drawings using
+    AutoCAD and Carlson Civil Suite 2024 for a boat ramp project located on the Green River in Kentucky.
+    I start by showcasing the project folder on my desktop and an overview of the completed plan set.
+</p>
+
+<hr>
+
+<h2>Cover Sheet and Location Map Creation</h2>
+
+<div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/-urywlynnmU">
+    </iframe>
+</div>
+
+<p>
+    I describe the contents of the plan set, including location details and how to generate site layouts
+    from survey data. I'll demonstrate how to create existing condition elevations and proposed contour
+    elevations for the ramp using Carlson Civil Suite 2024 tools. In the first video I explain how to set up the first drawing,
+    which includes the cover sheet and location map.
+</p>
+
+<p>
+    Next, I discuss a way of opening AutoCAD in safe mode to avoid loading unnecessary extensions
+    when I'm working with basic drawings. I then open my template for the cover sheet, organize my project files,
+    and use resources from the Kentucky Transportation Cabinet to obtain a location image for the project.</p>
+
+<p>
+    After exporting the image, I demonstrate how to insert it into my AutoCAD drawing, adjust its scale, and properly
+    manage the drawing order. I also plan to add my organization's logo and make additional adjustments to the layout.
+    Finally, I prepare to save my work and proceed to develop the site layout.
+</p>
+
+<hr>
+
+<h2>Surface File Creation</h2>
+
+<div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/25xpDx0PPrU">
+    </iframe>
+</div>
+
+<p>
+    In this video section I'm going to create existing condition contours for the boat ramp
+    area. My primary goal was to integrate both lidar data and survey points to develop a
+    comprehensive surface elevation model that accurately reflects the terrain.
+</p>
+
+<p>
+    I started by importing a text file containing our surveyed location points, which included information
+    such as point numbers, elevations, and descriptions. After setting up my project with Carlson Civil Suite 2024,
+    I imported these points and proceeded to acquire lidar data from Kentucky's digital elevation model repository.
+    With the lidar data downloaded and extracted, I also gathered aerial images to enhance the context of the project area.
+    Creating a rectangle around the area of interest allowed me to focus solely on the relevant lidar data.
+</p>
+
+<p>
+    Using some Carlson utilities, I generated contours from the lidar data. I also created a TIN
+    (Triangulated Irregular Network) file to facilitate easier manipulation of the data, which helped streamline 
+    the workflow. I triangulated my survey points and drew break lines to define the edges of the slope and the ramp.
+    I was able to place the break lines accurately by using my drone aerial image, ensuring they aligned with the
+    surveyed data. Finally, I merged the lidar and survey data together to create a surface model that serves as a solid
+    foundation for existing conditions.
+</p>
+
+<h2>Layout Page Creation</h2>
+
+<div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/3MvLnFzgt8M">
+    </iframe>
+</div>
+
+<p>
+    In the beginning, I outline the process of creating a layout page using survey data and contour lines.
+    I start by pulling in my existing contour data from a finalized survey point file. After selecting
+    the contours, I adjust their appearance, particularly the line types and scales, to ensure they are
+    displayed correctly in the paper space layout. A typical conventions is dashed
+    lines represent existing contours, while solid lines indicate proposed contours.
+</p>
+
+<p>
+    Next, I focus on designing a boat ramp, determining the tie-in elevation, which I set at elevation 410. I create a
+    3D polyline to represent the ramp's centerline, ensuring it aligns with existing contours. Using specific 
+    grade percentages of 17%, I calculate the ramp's slope and finalize its design elevation, which I want to be 
+    390 so that when the water is at the design elevation of 393.5 there is 3.5 feet of water to launch a boat.
+    Carlson's software tools facilitate this design process, allowing me to edit elevation points easily and
+    visualize the ramp's alignment.
+</p>
+
+<p>
+    After establishing the ramp's geometry, I work on defining its width and shoulders. I set up alignment lines for
+    the ramp's edges and offsets to accommodate 5-foot shoulders on each side. By adjusting the UCS (User Coordinate
+    System) back to the world reference, I ensure that my design maintains consistency. This involves checking and
+    setting the correct elevations for all line segments involved in the ramp's design, ensuring accuracy before 
+    moving forward.
+</p>
+
+<p>
+    Following the completion of the ramp layout, I turn my attention to generating proposed contours based on the
+    ramp's design. Utilizing Carlson's grading tools, I establish the pad template and calculate necessary volumes 
+    for cuts and fills. I integrate this new ramp data with existing conditions to create a final surface that
+    reflects all changes.
+</p>
+
+<p>
+    Finally, I create and adjust the final contours of the ramp, ensuring they are distinguishable from existing
+    contours. I enhance visual clarity by applying transparency to the aerial image and adding important annotations
+    like a north arrow and a bar scale to the layout.
+</p>
+
+<h2>Alignment, Profile and Cross Section Creation</h2>
+
+<div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/hT9hWtcfnEY">
+    </iframe>
+</div>
+
+<p>
+    In this video, I walk through the process of plotting a ramp, focusing specifically on a ramp centerline, profile, and cross sections.
+    I begin by demonstrate how to establish a centerline. I create a new file for the centerline, selecting the appropriate polyline to represent it.
+    I set the stationing intervals, ensuring the centerline is clearly defined and labeled.
+</p>
+
+<p>
+    Next, I proceed to draw the centerline within the design file, using a specific color standard for visibility. Once I have the centerline in place,
+    I use it to create profiles for both existing and proposed ramp conditions. I emphasize the importance of extending the centerline slightly beyond the
+    ramp endpoints for clarity in the final output. After verifying the profiles for accuracy, I make adjustments to ensure they align with my 
+    display preferences.
+</p>
+
+<p>
+    I then move on to plotting the ramp profiles. I set up the plotting parameters, ensuring the scales are appropriate for the layout. I opt for dashed
+    lines and color coding to differentiate between existing and proposed conditions. Once I'm satisfied with how the profiles look on the page, I start 
+    creating cross-sections along the ramp.
+</p>
+
+<p>
+    For the cross-sections, I initiate the process by selecting a starting and ending point along the centerline. I define the surface models for
+    both existing and proposed conditions, naming the output files accordingly. I choose to create cross-sections every 10 feet, ensuring a
+    comprehensive representation of the ramp's profile. After calculating the cross-sections, I plot them and review how they appear alongside the
+    ramp profiles, checking the alignment and coloring.
+</p>
+
+<p>
+    Finally, I focus on organizing the cross-sections into a clear layout for presentation. I group the sections into sets of four,
+    making adjustments to ensure they fit well on the page. I lock layers to avoid accidentally adjusting a plotted scale.
+    Arranging the cross-sections ensures that the final output is readable and ready for the plans.
+</p>
+
+<h2>Project Structure Overview</h2>
+
+<div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/IJ5UivQJ8YM">
+    </iframe>
+</div>
+
+<p>
+    In this transcript, I share my approach to organizing project folders for a boat ramp project. I
+    start by explaining that at the root of my project folder, I keep the final plans along with
+    the cost estimate. I've created several subfolders for different types of materials, including
+    CAD files, drone pictures, and survey information.
+</p>
+
+<p>
+    I emphasize the importance of having separate files for different aspects of the project. For example,
+    I create distinct CAD models for each section of the plan, such as layout, details, and existing conditions.
+    This way, I can manage what gets displayed without having to deal with multiple layers across various pages.
+    By chunking the information into smaller models, I streamline the plotting process and minimize the need to
+    turn off layers individually.
+</p>
+
+<p>
+    I also discuss my setup for the details page, where I draw elements to scale. I make a copy of my
+    page in one-to-one model space, allowing me to create different viewports at varying scales. This
+    setup ensures that dimensions and details remain accurate and give the flexibility of having multiple
+    scales on the same page.
+</p>
+
+<p>
+    Finally, I summarize how I group related files, such as existing and proposed conditions, to keep
+    my project organized. This structured approach helps me effectively manage the creation of the ramp
+    plan set and ensures I can easy find and modify files in the future if needed.
+</p>
+
+<h2>References</h2>
+<ul>
+    <li>
+        <a href="https://maps.kytc.ky.gov/kyview" target="_blank">
+            Kentucky Map Sheet Generator
+        </a>
+    </li>
+    <li>
+        <a href="https://kyfromabove.ky.gov/#Download" target="_blank">
+            Kentucky From Above
+        </a> - DEM and Natural Color Imagery
+    </li>https://www.sobaus.org/home
+    <li>
+        <a href="https://www.sobaus.org/home" target="_blank">
+            SOBA
+        </a> - States Organization for Boating Access
+    </li>
+    <li>
+        <a href="https://higherlogicdownload.s3.amazonaws.com/NASBLA/422e2b0d-9c05-43e7-bc08-ba65aae27732/UploadedImages/SOBA/Resources/Publications/Design_Handbook_2006_edition.pdf" target="_blank">
+            SOBA Design Manual
+        </a>
+    </li>
+</ul>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+<!-- Prism Code Highlights -->
+<script src="../static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function accordionExpand() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+<script>
+  function dropDownClick() {
+    var x = document.getElementById("additional-links-display");
+    var y = document.getElementById("large-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+<script>
+  function dropDownClickSmaller() {
+    var x = document.getElementById("additional-links-display2");
+    var y = document.getElementById("small-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+</body>
+</html>

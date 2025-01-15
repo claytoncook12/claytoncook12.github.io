@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+
+  <link rel="stylesheet" href="../static/css/w3.css">
+
+  <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+
+<style>
+  .iframe-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div 
+  class="w3-bar w3-white" 
+  style="border-bottom: #4BAF50 4px solid;box-shadow:0 2px 15px 0 rgba(0,0,0,0.16)"
+>
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="../index.html" style="text-decoration: none;">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="../index.html">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="../index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClick()"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="large-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="accordionExpand()">
+          &#9776;
+      </a>
+    </div>
+    <div class="w3-center w3-hide" id="additional-links-display">
+      <a href="../favorite_links.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClickSmaller()" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="small-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+    </div>
+    <div class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="additional-links-display2">
+      <a href="../favorite_links.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/trb2025_confrence_hall.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Takeaways from TRB 2025</u></b></h1>
+    <h5><span class="w3-opacity">January 15, 2025</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/trb.html'"
+          >
+            TRB
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/civil.html'"
+          >
+            Civil
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/pavement.html'"
+          >
+            Pavement
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/geotechnology.html'"
+          >
+            Geotechnology
+          </span>
+        
+      
+    </div>
+
+    <hr>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <p>
+    Back in November of 2024 I started as an engineer for the Kentucky Transportation Center (KTC).
+    As part of working here I was able to attend the Transportation Research Board (TRB) national
+    meeting that is held in Washington, DC. The TRB conference covers all modes of Transportation
+    and attracts thousands of transportation administrators, practitioners, policy makers, and 
+    researchers.
+</p>
+
+<p>
+    As a first time attendee it was a little overwhelming due to the shear number of
+    possible presentations and posters to go see. As well as possible Committee and Sub Committee
+    meetings to attend. I ended up focusing on topics that covered highway infrastructure assets,
+    asphalt performance and condition evaluation, recycled material use in pavements, 
+    ground improvement modeling and performance in roadways embankments, instrumentation of roadways
+    and soils and pile axial capacity modeling and instrumentation. Overall, it was a wonderful
+    experience that allowed me to get a sense of the state of practice in the transportation industry
+    and transportation agencies as well as current areas of research.
+</p>
+
+<h3>Key Take Aways</h3>
+
+<ol>
+    <li>
+        FHWA has on online portal of data, knowledge, analytical tools related to pavement, bridges
+        and materials. The portal is free to access. 
+        <a href="https://infohighway.fhwa.dot.gov/">infohighway.fhwa.dot.gov</a>. I plan to dig deeper
+        into the data through this portal and hopefully get more familiar with the FHWA Long-Term Pavement
+        Performance (LTPP) data that is housed there. (Lecture 1019, Sunday 9 am)
+    </li>
+    <li>
+        Uniform support underneath concrete asphalt pavements is more critical to long-term
+        performance than the strength or stiffness of the foundation. (Lecture 1047, 1:30 pm)
+        (Resources: <a href="https://rosap.ntl.bts.gov/view/dot/28440">Guidance for improving 
+            foundation layers to increase pavement performance on local roads.</a>,
+            <a href="https://trid.trb.org/View/367534">SUBGRADES AND SUBBASES FOR CONCRETE PAVEMENTS</a>
+        )
+    </li>
+    <li>
+        Presentation on the use of Marine Electrical Resistivity Surveys to look at scours holes in 
+        bridges was an interesting idea I had not seen before. Presentation by Andrew Gombac, Texas State University.
+    </li>
+    <li>
+        Learned about a new program at Western Kentucky University that presented presentation and posters
+        at TRB,
+            <a href="https://www.wku.edu/ctr/" target="_blank">WKU Center for Transportation Research (CTR) Facility</a>
+        that is run by Dr. Kirolos Haleem's. Looks to be very active.
+    </li>
+    <li>
+        Learned about asset management and life cycle cost analysis related to pavement. Very interesting presentations
+        given in lecture session 3075 Decision Making in Pavement Materials, Tuesday 10:15 am. Interesting application
+        of Monte Carlo Simulation and Markov Condition Modeling to estimate life-cycle costs for pavement performance.
+        <ul>
+            <li>Probability Based Pavement Asset Management in Ireland, Mr. Ray McGowan, PMS Pavement Management Services Ltd.</li>
+            <li>A Comparative Analysis of Full-Depth Reclamation and Overlay Pavements, Anneliese Crayton, University of Colorado</li>
+        </ul>
+    </li>
+    <li>
+        Pavement instrumentation subcommittee had some great presentations.
+        <ul>
+            <li>FAA Experience with Embedded Sensors, Navneet Garg</li>
+            <li>US-301 Concrete Test Road Florida Department of Transportation,
+                <a href="https://www.fdot.gov/materials/pavement/research/testroads/concrete/concrete-test-road#">Website</a> and
+                <a href="https://www.youtube.com/watch?v=BpXDLti08S8">Video</a>
+            </li>
+        </ul>
+    </li>
+</ol>
+
+<img 
+class="w3-image"
+src="../static/images/trb2025/csc_pic.jpg"
+alt="picture">
+<figcaption class="w3-center">
+    <b>Looking forward to Next Year!</b>
+</figcaption>
+
+<!-- Title H3 -->
+<h3>Favorite Slides</h3>
+
+<div class="w3-container w3-center w3-padding-small">
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_001.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Like the Summary Info And The Pavement Image</b>
+    </figcaption>
+    <br>
+
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_002.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Like the Display of Geotechnical Data</b>
+    </figcaption>
+    <br>
+
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_003.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Shows the Benefit of Geogrid In Roadway Base Layers In Field Tests</b>
+    </figcaption>
+    <br>
+
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_004.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Shows What Full Depth Rehabilitation is for Roadways</b>
+    </figcaption>
+    <br>
+
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_005.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Long-Term Performance Analysis As AOC</b>
+    </figcaption>
+    <br>
+
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_006.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Ireland's Pavement Maintenance and Modeling of Pavements</b>
+    </figcaption>
+    <br>
+
+    <img 
+        class="w3-image"
+        src="../static/images/trb2025/trb_2025_image_007.jpg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Pavement Performance Monitoring Tools</b>
+    </figcaption>
+    <br>
+</div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+<!-- Prism Code Highlights -->
+<script src="../static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function accordionExpand() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+<script>
+  function dropDownClick() {
+    var x = document.getElementById("additional-links-display");
+    var y = document.getElementById("large-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+<script>
+  function dropDownClickSmaller() {
+    var x = document.getElementById("additional-links-display2");
+    var y = document.getElementById("small-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+</body>
+</html>

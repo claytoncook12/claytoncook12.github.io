@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta example-website="https://reedsy.com/learning">
+    <title>Carver Irish Whistle Class</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #019f26;
+            --secondary: #FFC107;
+            --dark: #1A1F24;
+            --text: #F5F5F5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--dark);
+            border: none;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(26, 31, 36, 0.8), rgba(26, 31, 36, 0.9)), url('static/img/whistle_004.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .tag {
+            color: #8B95A1;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .time-block {
+            text-align: center;
+        }
+
+        .time-block .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .features {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature {
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .feature h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .section {
+            padding: 1rem 5%;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .instructor {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .instructor img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .schedule-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            opacity: 0.3;
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+        }
+
+        .faq-question.active + .faq-answer {
+            display: block;
+        }
+
+        .contact {
+            border-radius: 8px;
+            margin: 15px;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+        }
+
+        .location {
+            text-align: center;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .location iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .instructor {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        a {
+            color: var(--secondary  );
+        }
+
+        .video-section {
+            background-size: cover;
+            background-position: center;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .video-description {
+            max-width: 600px;
+            margin: 2rem auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .dimmer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+
+        .contact-success {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 1);
+            z-index: 1000;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: var(--text);
+            font-size: 1.5rem;
+            visibility: hidden;
+            padding: 3rem;
+            overflow-y: auto;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #3498db; /* Blue */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script src="static/js/api.js"></script>
+</head>
+<body>
+<div id="all-content">
+    <nav class="navbar">
+        <!-- <div class="logo"><span>IrishWhistleClass</span>@Carver</div> -->
+         <div class="logo"></div>
+        <div class="nav-links">
+            <a href="#" class="btn btn-primary" onclick="scrollToSignUp()">Sign Up</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Irish Melodies on the Tin Whistle</h1>
+
+            <div class="tag">IN-PERSON COURSE</div>
+
+            <p>Whether you're a complete beginner or looking to refine your skills,
+                this course will guide you through the enchanting world of Irish
+                tunes. Over four Tuesday evenings you'll learn to play beloved traditional
+                melodies and gain the confidence to join in lively, local Irish sessions.</p>
+            
+            <div class="countdown">
+                <div class="time-block">
+                    <div class="number">23</div>
+                    <div>Days</div>
+                </div>
+                <div class="time-block">
+                    <div class="number">21</div>
+                    <div>Hrs</div>
+                </div>
+                <div class="time-block">
+                    <div class="number">5</div>
+                    <div>Mins</div>
+                </div>
+                <div class="time-block">
+                    <div class="number">10</div>
+                    <div>Secs</div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="scrollToSignUp()">Claim your spot now</button>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #8B95A1;">Class Starts on April 15th, 2025</p>
+        </div>
+    </section>
+
+    <section class="video-section" id="course-preview">
+        <!-- <div class="section-title">
+            <h2>Course Overview</h2>
+        </div> -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/S8LjJB10sj8" title="Course Preview Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- <div class="video-description">
+            <p>Get an in-depth look at our "How to Write a Novel" course with Tom Bromley. In this video, Tom breaks down the course structure, shares writing tips, and gives you a taste of what you'll learn throughout the 101-day journey.</p>
+            <p>Watch to discover how this course can help you bring your novel idea to life!</p>
+        </div>
+        <button class="btn btn-primary">Enroll Now</button> -->
+    </section>
+
+    <section class="section" id="schedule">
+        <div class="section-title">
+            <h2>Course Information</h2>
+        </div>
+        <div class="schedule">
+            <div class="schedule-card">
+                <h3>Class Dates</h3>
+                <p>4 Tuesdays:</p>
+                <p>April 15, April 22, April 29 and May 6</p>
+            </div>
+            <div class="schedule-card">
+                <h3>Time</h3>
+                <p>6 pm to 7 pm</p>
+            </div>
+            <div class="schedule-card">
+                <h3>Class Format</h3>
+                <p>In-Person Small Group</p>
+            </div>
+            <div class="schedule-card">
+                <h3>Cost</h3>
+                <p>$30</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="location">
+        <div class="section-title">
+            <h2>Location</h2>
+        </div>
+        <div class="location">
+            <h3>Artworks at the Carver School, Lexington, Kentucky</h3>
+            <h4>Room to Be Determined</h4>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=522%20Patterson%20St.%20Lexington%20KY%2040508">
+                    522 Patterson St. Lexington, KY 40508
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="instructor">
+        <div class="section-title">
+            <h2>Meet Your Instructor</h2>
+        </div>
+        <div class="instructor">
+            <img src="static/img/head_shot.jpg?height=300&width=300" alt="Instructor portrait">
+            <div>
+                <h3>Clayton Cook</h3>
+                <p>I'm a tin whistle and flute player with over 
+                    5 years of experience. I have a passion for playing traditional Irish music, especially in local sessions, and am
+                    excited to start my first teaching class here in Lexington. My goal is 
+                    to help you discover the joy of playing the tin whistle. Join me in 
+                    this exciting journey and become part of a growing musical community
+                    here in Lexington, Kentucky!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="section-title">
+            <h2> Class Sign Up</h2>
+        </div>
+        <div class="contact-form">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" type="text" rows="4" placeholder="Have any additional questions?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign-Up</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do I need prior experience?</h3>
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No prior experience is necessary. We will be learning tunes slowly by ear.
+                        All are welcome to join the class.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do I need to purchase a whistle before the class?</h3>
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you will need to purchase a key of D tin whistle before the class begins.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Where can I purchase a whistle?</h3>
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Here are a few links for quality whistles available to purchase online:
+                        <ul>
+                            <li>
+                                <a href="https://www.irishflutestore.com/products/the-trad">
+                                The Trad by Tony Dixon - Key of D</a> - Great Budget Option</li>
+                            </a></li>
+                            <li><a href="https://mcneelamusic.com/wind/whistles/generation-d-whistle/">
+                                Generation Whistle - Key of D</a>- Great Beginner Whistle</li>
+                            <li><a href="https://www.hobgoblinusa.com/local/sales/products/GR23008/generation-brass-d-whistle-single/">
+                                Generation Brass Whistle - Key of D</a>
+                            </li>
+                            <li><a href="https://www.amazon.com/Waltons-Brass-Mellow-Whistle-Intermediates/dp/B000VPFOFK/ref=sr_1_8?crid=35ZPR1YMIPMSD&dib=eyJ2IjoiMSJ9.rejdYiiIO9sN3uJviyRdTT_H8fH3wqs9NF_55YO1Q_Tfe6Am9saVp42fNDDu4gV9RAVoRPSbtpcYCGArvB8dKF8YO52w6RYOTpmvZa75cbZIC3JatPgmWcZWw9gVhbXe3wd_GR08T1Mu9YPSBPlO_uFVJlAx6TA8huwPavFhiIA_K8FFk3H5tGSkdcgDEGf8dCaOcfpJmVRsblEOOKUH0DluFXeHvsTolhltp9wpl3_K6tyC-2VtV1jPS9jb_3o7PKm8o12OnCRLH9Ux_mo03sJS-IjqrrHvQKMWhD2tDkagwsLpiEVs6adhUojj6bcxmILxWJCmKxUQ50iuWMPkkLbY2V129aaZ5t2dOZZ5i3-O65ix2TA7a6gWzmMu7UVRhO5lPMBnXhhivO4WBx13yo7e4Li9BlnigluAIezkgAEFUfaltCcSJz1Ydf7i6Zbj.9u7dl1jFB60cQhO9bcJCg-g3vorwPZZAq0RZ0HXnlwA&dib_tag=se&keywords=tin+whistle&qid=1739105447&sprefix=tin+whistle%2Caps%2C126&sr=8-8">
+                                Waltons Brass Mellow Whistle - Key of D</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What if I want to play another Irish music melody instrument, can I still attend the class?</h3>
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>If you play another Irish melody instrument, such as fiddle, flute, etc.,
+                        you can attend the class and learn the tune with us whistle players. I will
+                        be limited with my instrument specific knowledge, but I will do my best to help you
+                        learn the tunes.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What type of music will be taught in the class?</h3>
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We will be learning Irish traditional tunes such as polkas, jigs, reels, and slip jigs.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Will there be sheet music?</h3>
+                    <span class="toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sheet music will be provided after the lesson, but the tunes will be taught by ear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="dimmer" class="dimmer">
+        <div class="spinner"></div>
+    </div>
+</div>
+
+    <div id="contact-success" class="contact-success">
+        <div style="padding: .2rem">
+            <div style="float: right">
+                <button onclick="closeSuccessMessage()" class="btn">X</button>
+            </div><br>
+            <h3>You are signed up!</h3>
+            <p>
+                If you want to go ahead and make a $30 payment
+                before the class, you can click the button below
+                and pay me via my PayPal. Input the amount and include
+                "whistle class" for what this is for. If you'd rather 
+                pay in person, that's fine too. I'm looking forward
+                to meeting you!
+            </p><br>
+            <p>
+                <a href="https://www.paypal.com/paypalme/claytoncook12" class="btn btn-primary" target="_blank">PayPal $30</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const toggle = question.querySelector('.toggle');
+                toggle.textContent = question.classList.contains('active') ? '-' : '+';
+            });
+        });
+
+        // Scroll to sign up
+        function scrollToSignUp() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Validation And Submit Form
+        const form = document.getElementById('myForm');
+            form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert('Please fill in all required fields correctly.');
+            } else {
+                event.preventDefault();
+                submitFormData();
+            }
+            });
+        
+        // Close Submission Success Message
+        function closeSuccessMessage() {
+            document.getElementById('contact-success').style.visibility = 'hidden';
+            document.getElementById('all-content').hidden = false;
+        }
+
+        // Countdown Timer
+        function countdownTimer(targetDate) {
+            const countdownElement = document.querySelector('.countdown');
+            const timeBlocks = countdownElement.querySelectorAll('.time-block .number');
+
+            function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                countdownElement.innerHTML = "Class has started!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timeBlocks[0].textContent = days;
+            timeBlocks[1].textContent = hours;
+            timeBlocks[2].textContent = minutes;
+            timeBlocks[3].textContent = seconds;
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+        const targetDate = new Date('April 15, 2025 18:00:00').getTime();
+        countdownTimer(targetDate);
+
+    </script>
+</body>
+</html>

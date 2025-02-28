@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Clayton Cook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="../static/images/cc_cog.svg">
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/0f74d8f617.js" crossorigin="anonymous"></script>
+<!-- CSS Styles -->
+
+
+  <link rel="stylesheet" href="../static/css/w3.css">
+
+  <link rel="stylesheet" href="../static/css/clayton-cook-website.css">
+
+<style>
+  .iframe-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+
+  .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+  }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="../static/css/prism.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+
+<body class="w3-light-grey">
+
+<!-- NavigationBar-->
+<div 
+  class="w3-bar w3-white" 
+  style="border-bottom: #4BAF50 4px solid;box-shadow:0 2px 15px 0 rgba(0,0,0,0.16)"
+>
+  <div class="w3-container w3-center w3-hide-medium w3-hide-small" style="font-size: 24px;">
+    <a href="../index.html" style="text-decoration: none;">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a>
+    Clayton Cook P.E. 
+      <span class="w3-text-grey" style="font-size: 20px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div class="w3-container w3-center w3-hide-large" style="font-size: 18px;">
+    <a href="../index.html">
+      <img 
+      src="../static/images/cc_cog_order_to_disorder.svg"
+      alt="csc_cog"
+      style="max-height: 60px; margin: 10px;"
+      >
+    </a><br>
+    Clayton Cook P.E.       
+      <span class="w3-text-grey" style="font-size: 14px;">
+        | Engineer, Programmer, and Musician
+      </span>
+  </div>
+
+  <div>
+    <div class="w3-center">
+      <a href="../index.html" 
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClick()"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="large-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+      <a href="javascript:void(0)" 
+        class="w3-button w3-right w3-hide-large w3-hide-medium w3-hover-none w3-text-grey w3-hover-text-black" onclick="accordionExpand()">
+          &#9776;
+      </a>
+    </div>
+    <div class="w3-center w3-hide" id="additional-links-display">
+      <a href="../favorite_links.html"
+        class="w3-button w3-hide-small w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  
+    <div id="navbar-id" class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="../index.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Home
+      </a>
+      <a href="../music.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Music
+      </a>
+      <a href="../about.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        About
+      </a>
+      <a onclick="dropDownClickSmaller()" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        <i id="small-nav-caret" class="fa fa-caret-down"></i>
+      </a>
+    </div>
+    <div class="w3-center w3-bar-block w3-hide w3-hide-large w3-hide-medium" id="additional-links-display2">
+      <a href="../favorite_links.html" class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-hover-text-black">
+        Favorite Links
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Main Content -->
+
+<div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-display-container">
+    <img src="../static/images/chart_image.jpg" alt="image_1400x440" 
+    style="width:100%"
+    >
+    
+    <div class="w3-tag w3-black w3-tiny w3-display-bottomright">Generated with AI February 28, 2025 at 11:56 AM</div>
+    
+  </div>
+  <div class="w3-container w3-content">
+    <h1><b><u>Graphing with Django and Plotly</u></b></h1>
+    <h5><span class="w3-opacity">Febuary 28, 2025</span></h5>
+    <div class="w3-row">
+      Tags:<br>
+      
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/django.html'"
+          >
+            Django
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/plotly.html'"
+          >
+            Plotly
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/graphing.html'"
+          >
+            Graphing
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/python.html'"
+          >
+            Python
+          </span>
+        
+          <span 
+            class="w3-tag w3-light-grey w3-hover-green"
+            onclick="location.href='../tag/javascript.html'"
+          >
+            Javascript
+          </span>
+        
+      
+    </div>
+
+    <hr>
+
+    <!-- Blog -->
+    <div class="w3-margin-bottom">
+      <p>Graphing with Django and Plotly is a powerful combination for creating interactive and visually
+appealing graphs on the web. In this blog post, we will explore how to set up a Django project
+for graphing. I will cover using either <i><a href="https://plotly.com/javascript/" target="blank">Plotly.js</a></i>
+in the browser or generating graphs with <i><a href="https://plotly.com/javascript/" target="blank">Plotly.py</a></i>
+on the backend. By the end of this post,
+you will have a solid understanding of how to use Django and Plotly together to create
+graphs for your web applications.</p>
+
+<h2>Setting Up the Django Project</h2>
+<ul>
+    <li>Installing necessary dependencies</li>
+    <ul>
+        <li><code>pip install django plotly</code></li>
+    </ul>
+    <li>Creating a new Django project.</li>
+    <ul>
+        <li><code>django-admin startproject core</code></li>
+        <li>Rename core folder to DjangoApp</li>
+        <li>Create App, <code>py manage.py startapp base</code></li>
+        <li>Add app to <kbd>settings.py</kbd></li>
+    </ul>
+    
+</ul>
+
+<h2>Creating Models And Importing Data</h2>
+<ul>
+    <li>Defining Django models to store data for graphing in <kbd>'base\models.py'</kbd></li>
+        <ul>
+            <p>We will be creating a model that represents population data for counties located
+                in Kentucky, United States. See model class definition below.</p>
+            </p>
+
+            <p>
+                <pre><code class="language-py"># base/models.py
+from django.db import models
+
+# Create your models here.
+class Population(models.Model):
+state = models.CharField(max_length=50)
+county = models.CharField(max_length=50)
+pop2020 = models.IntegerField('Population in 2020')
+pop2024 = models.IntegerField('Population in 2024')
+areaMi = models.FloatField("Area in square miles")
+density = models.FloatField("Calculated density of population per square mile")
+growthSince2020 = models.FloatField("Growth since 2020")
+
+def __str__(self):
+return self.county</code></pre>
+            </p>
+        </ul>
+    <li>Defining Django Admin models to display data for admin in <kbd>'base\admin.py'</kbd></li>
+    <ul>
+        <p>We will be creating a model admin class that will display the population data in the
+            Django admin interface. See model admin class definition below.</p>
+        <p>
+            <pre><code class="language-py"># base/admin.py
+from django.contrib import admin
+from .models import Population
+
+# Register your models here.
+@admin.register(Population)
+class PopulationAdmin(admin.ModelAdmin):
+list_display = ('county',)
+ordering = ('county',)
+search_fields = ('county',)</code></pre>
+        </p>
+    </ul>
+    <li>Running migrations to create database tables. 
+        <code>python manage.py makemigrations</code> & 
+        <code>python manage.py migrate</code>
+    </li>
+    <li>Create an Admin 
+        <code>python manage.py createsuperuser</code>
+    </li>
+    <li>Creating fixtures with data in <kbd>'base\fixtures\mydata.json'</kbd></li>
+        <ul>
+            <p>I created this fixtures in json format after importing data into my database
+                from a csv file. Fixtures are useful for importing data
+                into the database for testing or seeding data. The file 
+                has data from all 120 counties in Kentucky. See snippet of the fixture below.</p>
+            </p>
+
+            <p>
+                <pre><code class="language-json"># base/fixtures/mydata.json
+[
+    {
+        "model": "base.population",
+        "pk": 1,
+        "fields": {
+        "state": "Kentucky",
+        "county": "Jefferson County",
+        "pop2020": 782845,
+        "pop2024": 771193,
+        "areaMi": 381.0,
+        "density": 2024.1286089238845,
+        "growthSince2020": -0.0148841724734781
+    }
+    },
+    {
+        "model": "base.population",
+        "pk": 2,
+        "fields": {
+...</code></pre>
+            </p>
+        </ul>
+    <li>Importing fixtures with data. <code>django-admin loaddata mydata</code></li>
+    <li>Verify that the data was import correctly with the admin interface.</li>
+</ul>
+
+<h2>Building the Backend with Django For Chart Generation</h2>
+<ul>
+    <li>Add <kbd>base.urls.py</kbd> to <kbd>urls.py</kbd></li>
+    <ul>
+        <p>
+            <pre><code class="language-py"># base/urls.py
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+path("", views.index, name="index")
+]</code></pre>
+        </p>
+        <p>
+            <pre><code class="language-py"># core/urls.py
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+path('admin/', admin.site.urls),
+path('', include('base.urls')),
+]</code></pre>
+        </p>
+    </ul>
+    <li>Creating views to handle data processing and graph generation.</li>
+    <ul>
+        <li>Creating view in <kbd>'base\views.py'</kbd></li>
+            <p>
+                <pre><code class="language-py"># base/views.py
+from django.shortcuts import render
+from base.models import Population
+from base.graphs import histogram_plot_pop, histogram_plot_pop_change
+
+# Create your views here.
+def index(request):
+
+# Get the population data
+county_pop = Population.objects.all() #<- for backend processing
+county_pop_json = list(Population.objects.values()) #<- for frontend consumption
+
+# Backend Histogram Plots
+pop_hist_2024 = histogram_plot_pop(county_pop)
+pop_hist_change_2024 = histogram_plot_pop_change(county_pop)
+
+return render(request, "base/index.html", {
+"county_pop": county_pop,
+"county_pop_json": county_pop_json,
+"pop_hist_2024": pop_hist_2024,
+"pop_hist_change_2024": pop_hist_change_2024
+})</code></pre>
+            </p>
+    
+        <li>
+            <p>You can see from <kbd>base/views.py</kbd> above that we have a variable <kdb>county_pop_json</kdb>
+            that will be used for front end javascript consumption and two functions that generate
+            histograms for population data that we have not created yet. These functions will be defined in <kbd>base/graphs.py</kbd>.
+            </p>
+        </li>
+    </ul>
+</ul>
+
+<h2>Plotly with the Backend</h2>
+    <ul>
+        <li>Creating the two functions for backend graph creation.</li>
+        <ul>
+            <p>
+<pre><code class="language-py"># base/graphs.py
+from plotly.offline import plot
+from plotly.graph_objs import Histogram, Layout
+from plotly.graph_objs.layout import XAxis, YAxis
+from base.models import Population
+
+def histogram_plot_pop(population: Population) -> str:
+    if population.count() == 0:
+        return "No data to plot"
+    
+    x_data = list(population.values_list("pop2024", flat=True))
+
+    # Create a histogram
+    trace = Histogram(
+        x=x_data,
+        opacity=0.7,
+        xbins=dict(size=10000)
+    )
+
+    plotly_html = plot({
+        "data": [trace],
+        "layout": Layout(
+            title="Kentucky Counties 2024 Population Histogram",
+            bargap=0.1,
+            yaxis=YAxis(
+                title="Count",
+
+                gridcolor="#b0b0b0",
+            ),
+            xaxis=XAxis(
+                title="Population"
+            ),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)'
+        )
+    }, 
+    output_type="div",
+    include_plotlyjs=False)
+
+    return plotly_html
+
+def histogram_plot_pop_change(population: Population) -> str:
+    if population.count() == 0:
+        return "No data to plot"
+    
+    x_data = list(population.values_list("growthSince2020", flat=True))
+    x_data_percent = [x * 100 for x in x_data ]
+
+    # Create a histogram
+    trace = Histogram(
+        x=x_data_percent,
+        opacity=0.7
+    )
+
+    plotly_html = plot({
+        "data": [trace],
+        "layout": Layout(
+            title="Kentucky Counties 2024 Population Change Histogram",
+            bargap=0.1,
+            yaxis=YAxis(
+                title="Count",
+
+                gridcolor="#b0b0b0",
+            ),
+            xaxis=XAxis(
+                title="Population Change (%)"
+            ),
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)'
+        )
+    }, 
+    output_type="div",
+    include_plotlyjs=False)
+
+    return plotly_html</code></pre>
+            </p>
+        </ul>
+        <li>
+            <p>Passing graph html code to front end through the <kdb>pop_hist_2024</kdb>
+            and <kdb>pop_hist_change_2024</kdb> variables. Then displaying that in 
+            the <kdb>index.html</kdb> file.
+            </p>
+
+            <pre><code class="language-html"># base/templates/index.html
+... 
+<article id="backend__graphs">
+{% autoescape off %}
+    {{ pop_hist_2024 }}
+{% endautoescape %}
+{% autoescape off %}
+    {{ pop_hist_change_2024 }}
+{% endautoescape %}
+</article>
+...</code></pre>
+        </li>
+    </ul>
+
+<h2>Plotly with the Frontend</h2>
+<ul>
+    <li>
+        In order to use Plotly.js on the front end you will need 
+        <code>&lt;script src="https://cdn.plot.ly/plotly-3.0.0.min.js" charset="utf-8"&gt;&lt;/script&gt;</code>
+        in the head of your html file.
+    </li>
+    <li>
+        Next up is creating the templates for that graph creation. I like to separate out these into 
+        a sub template, <code>'base\templates\base\partials\index_county_pop.html'</code>.
+    </li>
+    <li>
+        We can then convert our <code>county_pop_json</code> variable from the <code>view.py</code> file into json data
+        that can be consumed by our javascript code.
+
+        <p>
+        <pre><code class="language-html">
+&lt;div id="plot_001"&gt;&lt;/div&gt;
+&lt;div id="plot_002"&gt;&lt;/div&gt;
+
+{{ county_pop_json|json_script:"county_pop_json" }} <- this line converts the data to json
+
+&lt;script type="text/javascript" defer&gt;
+// This reads the JSON data
+const data = JSON.parse(document.getElementById('county_pop_json').textContent);
+	
+// Histogram Plot County Population 2024
+canvas_001 = document.getElementById('plot_001');
+const trace_001 = {
+    x: [...data.map((county) => county.pop2020)],
+    type: 'histogram',
+    opacity: 0.7,
+    xbins: {size: 10000}
+};
+const layout_001 = {
+    bargap: 0.1,
+    title: {
+        text: "Kentucky Counties 2024 Population Histogram",
+    },
+    xaxis: { title: {'text': 'Population'}},
+    yaxis: { title: {'text':'Count'}},
+};
+Plotly.newPlot(canvas_001, [trace_001], layout_001);
+
+// Histogram Plot County Population Change 2024
+canvas_002 = document.getElementById('plot_002');
+const trace_002 = {
+    x: [...data.map((county) => (county.growthSince2020) * 100)],
+    type: 'histogram',
+    opacity: 0.7
+};
+const layout_002 = {
+    bargap: 0.05,
+    title: {
+        text: "Kentucky Counties 2024 Population Change Histogram",
+    },
+    xaxis: { title: {'text': 'Population Change (%)'}},
+    yaxis: { title: {'text':'Count'}},
+};
+Plotly.newPlot(canvas_002, [trace_002], layout_002);
+&lt;/script&gt</code></pre>
+        </p>
+    </li>
+    <li>Now you can add <code>{% include "base/partials/index_county_pop.html" with county_pop_json=county_pop_json %}</code>
+    into your <cbd>index.html</cbd> to include the plotly.js graphs.</li>
+</ul>
+
+<h2>Looks of the Browser</h2>
+<div class="w3-container  w3-center w3-padding-small">
+    <img 
+        class="w3-image"
+        src="../static/images/graphs_django_plotly_screenshot.jpeg"
+        alt="picture">
+    <figcaption class="w3-center">
+        <b>Figure: Graphs in the Browser</b>
+    </figcaption>
+</div>
+<p>
+    After all of this work, you should have a Django project that can display population data in
+    plotly generated histograms. The front end will display the histograms in the browser
+    using Plotly.js or you can create the same graphs with Plotly.py on the backend.
+    This is a powerful combination that can be used to create interactive and visually
+    appealing graphs for your web applications.
+</p>
+
+<h2>Pros and Cons of Plotly.js vs. Plotly.py</h2>
+<p id="pro_cons">
+    Using Plotly.js provides highly interactive graphs that can be manipulated directly in the browser,
+    reducing server load by handling rendering on the client side and integrating well with various frontend
+    frameworks. However, it requires knowledge of JavaScript, raises potential data privacy concerns due to
+    client-side data handling, and may involve more complex setup. On the other hand, Plotly.py allows
+    developers to stay within the Python ecosystem, processes data on the server side for better control
+    over sensitive information, and can be simpler to set up within a Python environment. Despite these
+    advantages, Plotly.py might not offer the same level of interactivity and responsiveness as Plotly.js,
+    and it can increase server load with many users generating graphs simultaneously. Ultimately, the
+    choice between Plotly.js and Plotly.py depends on the specific needs of the project.
+</p>
+
+<h2>Further Resources</h2>
+<ul>
+    <li><a href="https://www.youtube.com/watch?v=h39eMGWmEV4" target="_blank">
+        BugBytes - Passing Backend Data to JavaScript
+    </a></li>
+    <li><a href="https://adamj.eu/tech/2020/02/18/safely-including-data-for-javascript-in-a-django-template/" target="_blank">
+        Adam Johnson - Django: safely include data for JavaScript in templates
+    </a></li>
+</ul>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m8 s12">
+        <p><button 
+          class="w3-button w3-padding-large w3-white w3-border"
+          type="button"
+          onclick="location.href='../index.html'"
+          >
+          <b>Back to Home</b>
+        </button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer 
+  class="w3-container w3-transparent w3-padding-32 w3-margin-top"
+>
+    <a href="https://github.com/claytoncook12" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i 
+        class="fa-brands fa-github w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    <a href="https://www.facebook.com/clayton.cook.165470" target="_blank"
+      style="text-decoration: none;"
+    >
+      <i
+        class="fa-brands fa-facebook w3-large w3-hover-text-green"
+      ></i>
+    </a>
+    - Clayton S. Cook - 2022
+</footer>
+
+<!-- Javascript Files -->
+
+
+<!-- Prism Code Highlights -->
+<script src="../static/js/prism.js"></script>
+
+<!-- Navigation Script -->
+<script>
+  function accordionExpand() {
+    var x = document.getElementById("navbar-id");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+<script>
+  function dropDownClick() {
+    var x = document.getElementById("additional-links-display");
+    var y = document.getElementById("large-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+<script>
+  function dropDownClickSmaller() {
+    var x = document.getElementById("additional-links-display2");
+    var y = document.getElementById("small-nav-caret");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      y.className = y.className.replace(" fa-caret-down", " fa-caret-up");
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+      y.className = y.className.replace(" fa-caret-up", " fa-caret-down");
+    }
+  }
+</script>
+</body>
+</html>

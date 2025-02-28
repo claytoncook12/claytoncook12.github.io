@@ -201,21 +201,40 @@ on the backend. By the end of this post,
 you will have a solid understanding of how to use Django and Plotly together to create
 graphs for your web applications.</p>
 
+<div class="iframe-container">
+    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/w3TI7pqWIC4">
+    </iframe>
+</div>
+
+<div style="height: 30px;">
+    <div
+        onclick="window.location='https://github.com/claytoncook12/Plotly_DJ_Blog_Post'"
+        class="w3-green w3-hover-shadow w3-right"
+        style="font-size: 12px; cursor: pointer; max-width: 200px; border-radius: 10px; padding: 10px; margin: 10px;"
+        >
+            Full Code on Github
+    </div>
+</div>
+
+
+<br>
 <h2>Setting Up the Django Project</h2>
-<ul>
-    <li>Installing necessary dependencies</li>
+<p>
     <ul>
-        <li><code>pip install django plotly</code></li>
-    </ul>
-    <li>Creating a new Django project.</li>
-    <ul>
-        <li><code>django-admin startproject core</code></li>
-        <li>Rename core folder to DjangoApp</li>
-        <li>Create App, <code>py manage.py startapp base</code></li>
-        <li>Add app to <kbd>settings.py</kbd></li>
-    </ul>
-    
-</ul>
+        <li>Installing necessary dependencies</li>
+        <ul>
+            <li><code>pip install django plotly</code></li>
+        </ul>
+        <li>Creating a new Django project.</li>
+        <ul>
+            <li><code>django-admin startproject core</code></li>
+            <li>Rename core folder to DjangoApp</li>
+            <li>Create App, <code>py manage.py startapp base</code></li>
+            <li>Add app to <kbd>settings.py</kbd></li>
+        </ul>
+        
+    </ul>    
+</p>
 
 <h2>Creating Models And Importing Data</h2>
 <ul>
@@ -298,7 +317,7 @@ search_fields = ('county',)</code></pre>
 ...</code></pre>
             </p>
         </ul>
-    <li>Importing fixtures with data. <code>django-admin loaddata mydata</code></li>
+    <li>Importing fixtures with data. <code>py manage.py loaddata mydata</code></li>
     <li>Verify that the data was import correctly with the admin interface.</li>
 </ul>
 

@@ -1,5 +1,5 @@
 async function submitFormData() {
-    const url = 'https://script.google.com/macros/s/AKfycbwg9mwD0pDbZiq4fNSydHN4BsyoO6u5CcG-SrUxxXaJj2hGppzPjwyjfZY6BmjE2awl/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbwYsFUwjrLLhm9jE2jz26pu5G3Hj6lXjNoc7ZSGhihNyBuaWfIyY2yLU2ZIsZkRpWIA/exec';
     const formData = new URLSearchParams();
     const dimmer = document.getElementById('dimmer');
     const name = document.getElementById('name').value;
